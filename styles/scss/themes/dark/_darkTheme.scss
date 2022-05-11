@@ -1,0 +1,225 @@
+@use '../../abstracts/darkThemeColors'as darkTheme;
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@200;300;400;500&family=Poppins:wght@100;200;300;400;500;600&family=Rubik:wght@300;400;500;700&display=swap');
+
+body.dark {
+
+    * {
+        color: darkTheme.$text-color;
+    }
+
+    p {
+        font-weight: 300;
+        color: #000;
+        line-height: 1.55;
+    }
+
+    h1,
+    h2 {
+        line-height: 50px;
+    }
+
+    h4 {
+        color: darkTheme.$subtitles-color;
+    }
+
+    body {
+        background-color: darkTheme.$base-bkg;
+    }
+
+    .stack-wrapper,
+    .contact-wrapper {
+        background-color: darkTheme.$container-secondary;
+    }
+
+    .header-wrapper {
+        background: linear-gradient(157.5deg, darkTheme.$base-bkg 44.5%, darkTheme.$secondary-bkg 43%);
+    }
+
+    .footer-wrapper,
+    .projects-wrapper,
+    .about-wrapper {
+        background-color: darkTheme.$secondary-bkg;
+    }
+
+    .stack,
+    .projects,
+    .menu,
+    header.header,
+    .about,
+    section.contact {
+        p {
+            color: darkTheme.$text-color;
+        }
+    }
+
+
+    .header {
+
+        &__introduction {
+
+            h1,
+            h2 {
+                font-family: 'Raleway';
+                font-weight: 300;
+                line-height: 55px;
+                span {
+                    color: darkTheme.$main-yellow;
+                }
+            }
+
+            h2 {
+                color: darkTheme.$subtitles-color;
+            }
+
+            p {
+                color: darkTheme.$text-color;
+            }
+
+            button {
+                background-color: darkTheme.$main-yellow;
+                border: 2px solid darkTheme.$main-yellow;
+                color: darkTheme.$base-bkg;
+                margin-top: 35px;
+                margin-left: 10px;
+
+                &:hover {
+                    border: 2px solid darkTheme.$main-yellow;
+                    color: darkTheme.$text-color;
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+
+    .side-nav-wrapper {
+
+        .side-nav {
+
+            &__item {
+
+                svg {
+                    width: 30px;
+                    height: 30px;
+                    filter: invert(93%) sepia(14%) saturate(312%) hue-rotate(67deg) brightness(111%) contrast(105%);
+                }
+
+                &:hover {
+                    svg {
+                        filter: invert(79%) sepia(21%) saturate(1452%) hue-rotate(344deg) brightness(108%) contrast(98%);
+                    }
+                }
+            }
+        }
+    }
+
+    .menu {
+        .logo {
+            color: darkTheme.$main-yellow;
+        }
+
+        &__item {
+            &:hover {
+                color: darkTheme.$main-yellow
+            }
+        }
+
+        .theme-switch {
+            display: block;
+            height: 46px;
+            position: relative;
+            width: 46px;
+        }
+
+        .slider {
+            bottom: 0;
+            cursor: pointer;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: 0.3s;
+            border: 2px solid #ccc;
+            border-radius: 34px;
+
+            &:hover {
+                border-color: darkTheme.$text-color;
+            }
+        }
+
+        .slider.dark {
+            display: flex;
+            position: relative;
+            border-radius: 34px;
+            height: 46px;
+            width: 46px;
+            justify-content: center;
+            text-align: center;
+
+            img {
+                position: absolute;
+                top: 7px;
+                left: 7px;
+                height: 28px;
+                width: 28px;
+                justify-self: center;
+                opacity: 1;
+            }
+        }
+
+        .slider.light {
+            img {
+                opacity: 0;
+            }
+        }
+    }
+
+    .projects {
+
+        &__item-wrapper {
+            height: 45rem;
+            max-width: 31%;
+            gap: 15px;
+            border-radius: 10px;
+            flex-grow: 1;
+        }
+
+        .item {
+            border: 2px solid darkTheme.$container-color;
+
+            &:hover {
+                border: 2px solid darkTheme.$text-color;
+            }
+
+
+            &__techStack {
+                background-color: #f1f1f1;
+                border: 1px solid #616161;
+
+                p {
+                    color: #000;
+                }
+            }
+        }
+
+    }
+
+    .contact {
+
+        button {
+            background-color: darkTheme.$main-yellow;
+            border: 1px solid darkTheme.$main-yellow;
+
+            &:hover {
+                background-color: transparent;
+                border-color: darkTheme.$main-yellow
+            }
+        }
+    }
+
+    .footer {
+        p {
+            color: darkTheme.$text-color;
+        }
+    }
+
+}
