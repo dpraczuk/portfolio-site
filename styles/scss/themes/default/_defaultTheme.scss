@@ -418,11 +418,17 @@ section.contact {
     min-height: 500px;
     justify-content: space-between;
 
+    strong {
+        font-size: 18px;
+        color: lightTheme.$main-yellow;
+    }
+
     &__content {
         display: flex;
         flex-direction: column;
         flex-basis: 45%;
         align-items: flex-start;
+        align-self: center;
     }
 
     &__svg {
@@ -521,15 +527,25 @@ section.contact {
     flex-direction: row;
     min-height: 400px;
     justify-content: space-between;
+    align-items: center;
+
+    strong {
+        font-size: 18px;
+        color: lightTheme.$main-yellow
+    }
 
     &__content {
         flex-basis: 50%;
+
+        p {
+            font-size: 18px;
+        }
     }
 
     &__image {
         flex-basis: 1;
-        height: 450px;
-        width: 450px;
+        height: 460px;
+        width: 460px;
         background-color: lightTheme.$container-color;
         border-radius: 10px;
 
