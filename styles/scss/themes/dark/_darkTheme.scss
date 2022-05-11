@@ -202,6 +202,13 @@ body.dark {
         }
 
     }
+    .about,
+    .stack {
+        strong {
+            font-size: 18px;
+            color: darkTheme.$main-yellow
+        }
+    }
 
     .contact {
 

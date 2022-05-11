@@ -811,6 +811,11 @@ body.dark .projects .item__techStack {
 body.dark .projects .item__techStack p {
   color: #000;
 }
+body.dark .about strong,
+body.dark .stack strong {
+  font-size: 18px;
+  color: #FDCA40;
+}
 body.dark .contact button {
   background-color: #FDCA40;
   border: 1px solid #FDCA40;
