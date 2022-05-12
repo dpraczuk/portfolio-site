@@ -971,7 +971,7 @@ section.contact {
 }
 
 @media (max-width: 550px) {
-    .stack, .about {
+    .stack, .about, .projects {
         h3 {
             font-size: 30px;
         }
@@ -1002,7 +1002,7 @@ section.contact {
 
 @media (max-width: 500px) {
     .projects-wrapper {
-        height: 670px;
+        height: 80vh;
     }
     .projects {
         &__container {
@@ -1025,6 +1025,7 @@ section.contact {
     }
     .stack {
         min-height: 0;
+        margin: 55px 0 0 0;
         &__svg {
             display: none;
         }
@@ -1032,9 +1033,6 @@ section.contact {
 }
 
 @media (max-width: 450px) {
-    .stack {
-        min-height: 100vh;
-    }
     .header {
         max-height: 60vh;
         &__introduction {

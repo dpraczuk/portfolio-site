@@ -924,13 +924,13 @@ section.contact {
   }
 }
 @media (max-width: 550px) {
-  .stack h3, .about h3 {
+  .stack h3, .about h3, .projects h3 {
     font-size: 30px;
   }
-  .stack h4, .about h4 {
+  .stack h4, .about h4, .projects h4 {
     font-size: 22px;
   }
-  .stack__content, .about__content {
+  .stack__content, .about__content, .projects__content {
     width: 400px;
   }
 
@@ -949,7 +949,7 @@ section.contact {
 }
 @media (max-width: 500px) {
   .projects-wrapper {
-    height: 670px;
+    height: 80vh;
   }
 
   .projects__container {
@@ -970,16 +970,13 @@ section.contact {
 
   .stack {
     min-height: 0;
+    margin: 55px 0 0 0;
   }
   .stack__svg {
     display: none;
   }
 }
 @media (max-width: 450px) {
-  .stack {
-    min-height: 100vh;
-  }
-
   .header {
     max-height: 60vh;
   }
