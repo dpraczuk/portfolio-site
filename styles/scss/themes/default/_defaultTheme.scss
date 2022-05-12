@@ -95,10 +95,10 @@ section.contact {
     justify-content: space-between;
 
     &__introduction {
+        position: absolute;
         top: 70px;
         left: 0;
         width: 900px;
-        position: absolute;
         z-index: 1;
 
         h1,
@@ -176,6 +176,7 @@ section.contact {
 
 .side-nav-wrapper {
     position: absolute;
+    z-index: 99;
 
     .side-nav {
         position: fixed;
@@ -304,11 +305,12 @@ section.contact {
 
 .projects-wrapper {
     justify-content: center;
+    padding-bottom: 100px;
 }
 
 .projects {
     min-height: 80vh;
-    margin-bottom: 100px;
+    // margin-bottom: 100px;
 
     &__container {
         display: flex;
@@ -385,7 +387,6 @@ section.contact {
         &__techStack {
             position: absolute;
             display: flex;
-            font-size: 24px;
             padding: 15px;
             top: 20px;
             left: 15px;
@@ -414,7 +415,7 @@ section.contact {
     display: flex;
     margin: 55px 0 55px;
     flex-direction: row;
-    height: 50vh;
+    // height: 50vh;
     min-height: 500px;
     justify-content: space-between;
 
@@ -602,5 +603,161 @@ section.contact {
 
     p {
         font-size: 13px;
+    }
+}
+
+@media (max-width: 1600px) {
+
+    .header {
+        &__photo {
+            top: -40px;
+            right: -150px;
+            img {
+                height: 590px;
+                width: 730px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1360px) {
+
+    .header {
+        &__photo {
+            top: 0px;
+            right: -80px;
+            img {
+                height: 520px;
+                width: 630px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1220px) {
+    .menu {
+        min-width: 0;
+        width: 80%;
+    }
+
+    .header {
+        &__photo {
+            top: 40px;
+            right: 0px;
+            img {
+                height: 440px;
+                width: 530px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .side-nav-wrapper {
+        display: none;
+    }
+}
+
+@media (max-width: 1060px) {
+
+    .header {
+        width: 80%;
+        &__introduction {
+            width: 80%;
+        }
+        &__photo {
+            display: none;
+            top: 0px;
+            right: -80px;
+            img {
+                height: 520px;
+                width: 630px;
+            }
+        }
+    }
+
+    .projects-wrapper {
+        padding-bottom: 230px;
+    }
+
+    .projects {
+        &__container {
+            min-width: 760px;
+        }
+        &__item-wrapper {
+            height: 180px;
+        }
+        .item {
+            height: 390px;
+
+            &__techStack {
+                left: 12.5px;
+                padding: 10px 15px;
+                p {
+                    font-size: 18px;
+                }
+            }
+            &__subtitle {
+                font-size: 24px;
+            }
+        }
+    }
+
+    .stack {
+        flex-direction: column;
+        min-height: 900px;
+        align-items: center;
+        &__content {
+            width: 700px;
+            margin: 0 auto;
+        }
+
+        &__svg {
+            width: 512px;
+            // width: 400px;
+        }
+    }
+
+    .about {
+        flex-direction: column;
+        align-items: center;
+        &__content {
+            width: 700px;
+            margin: 0 auto 50px;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .stack, .about {
+        &__content {
+            width: 500px;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .menu {
+        width: 85%;
+        &__list {
+            display: none;
+        }
+    }
+    .stack, .about {
+        &__content {
+            p {
+                font-size: 16px;
+            }
+            strong {
+                font-size: 16px;
+            }
+        }
+    }
+}
+@media (max-width: 550px) {
+    .stack {
+        &__content {
+            width: 400px;
+        }
     }
 }
