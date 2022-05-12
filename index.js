@@ -1,3 +1,12 @@
+
+
+const swiper = new Swiper(".mySwiper", {
+    slidesPerView: "auto",
+    centeredSlides: true,
+    spaceBetween: 20,
+    initialSlide: 1,
+});
+
 const body = document.querySelector("body");
 const themeBtn = document.querySelector('.theme-switch');
 const stackIcons = document.querySelectorAll('.stack__icon');
@@ -38,7 +47,6 @@ aboutBtn.addEventListener("click", () => (scrollTo(aboutSection)))
 contactBtn.addEventListener("click", () => (scrollTo(contactSection)))
 
 const projectsItems = document.querySelectorAll('.projects__item-wrapper .item');
-
 
 //project items mouseover event
 projectsItems.forEach((item) => {

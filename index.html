@@ -60,39 +60,41 @@
             <section class="projects">
                 <h3>My experience?</h3>
                 <h4>Checkout my projects</h4>
-                <div class="projects__container">
-                    <div class="projects__item-wrapper">
-                        <div class="item">
-                            <div class="item__techStack">
-                                <p>Vanilla Javascript</p>
+                <div class="projects__container swiper mySwiper" `>
+                    <div class="swiper-wrapper">
+                        <div class="projects__item-wrapper swiper-slide">
+                            <div class="item">
+                                <div class="item__techStack">
+                                    <p>Vanilla Javascript</p>
+                                </div>
+                                <div class="item__image portfolio">
+                                    <img src="./assets/projects/portfolio.png" />
+                                </div>
                             </div>
-                            <div class="item__image portfolio">
-                                <img src="./assets/projects/portfolio.png" />
-                            </div>
+                            <div class="item__subtitle">My portfolio</div>
                         </div>
-                        <div class="item__subtitle">My portfolio</div>
-                    </div>
-                    <div class="projects__item-wrapper">
-                        <div class="item">
-                            <div class="item__techStack">
-                                <p>React & Next.js</p>
+                        <div class="projects__item-wrapper swiper-slide">
+                            <div class="item">
+                                <div class="item__techStack">
+                                    <p>React & Next.js</p>
+                                </div>
+                                <div class="item__image pperfect">
+                                    <img src="./assets/projects/pperfekt.png" />
+                                </div>
                             </div>
-                            <div class="item__image pperfect">
-                                <img src="./assets/projects/pperfekt.png" />
-                            </div>
+                            <div class="item__subtitle">Prezent Perfekt <br> site</div>
                         </div>
-                        <div class="item__subtitle">Prezent Perfekt <br> site</div>
-                    </div>
-                    <div class="projects__item-wrapper">
-                        <div class="item">
-                            <div class="item__techStack">
-                                <p>React & Typescript</p>
+                        <div class="projects__item-wrapper swiper-slide">
+                            <div class="item">
+                                <div class="item__techStack">
+                                    <p>React & Typescript</p>
+                                </div>
+                                <div class="item__image tracker">
+                                    <img src="./assets/projects/tracker.png" />
+                                </div>
                             </div>
-                            <div class="item__image tracker">
-                                <img src="./assets/projects/tracker.png" />
-                            </div>
+                            <div class="item__subtitle">Physical activity tracker</div>
                         </div>
-                        <div class="item__subtitle">Physical activity tracker</div>
                     </div>
                 </div>
             </section>
@@ -171,7 +173,7 @@
         </div>
     </div>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="index.js"></script>
+    <script type="module" src="index.js"></script>
 </body>
 
 </html>

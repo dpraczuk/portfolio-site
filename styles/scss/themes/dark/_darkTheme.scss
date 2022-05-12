@@ -229,4 +229,374 @@ body.dark {
         }
     }
 
+    
+    @media (max-width: 1600px) {
+
+        .header {
+            &__photo {
+                top: -40px;
+                right: -150px;
+                img {
+                    height: 590px;
+                    width: 730px;
+                }
+            }
+        }
+    }
+    
+    @media (max-width: 1360px) {
+    
+        .header {
+            &__photo {
+                top: 0px;
+                right: -80px;
+                img {
+                    height: 520px;
+                    width: 630px;
+                }
+            }
+        }
+    }
+    
+    @media (max-width: 1220px) {
+        .menu {
+            min-width: 0;
+            width: 80%;
+        }
+    
+        .header {
+            &__photo {
+                top: 40px;
+                right: 0px;
+                img {
+                    height: 440px;
+                    width: 530px;
+                }
+            }
+        }
+    }
+    
+    @media (max-width: 1200px) {
+        .side-nav-wrapper {
+            display: none;
+        }
+    }
+    
+    @media (max-width: 1060px) {
+    
+        .header {
+            width: 80%;
+            &__introduction {
+                width: 80%;
+            }
+            &__photo {
+                display: none;
+                top: 0px;
+                right: -80px;
+                img {
+                    height: 520px;
+                    width: 630px;
+                }
+            }
+        }
+    
+        .projects-wrapper {
+            padding-bottom: 130px;
+        }
+    
+        .projects {
+            &__container {
+                width: 820px;
+            }
+            &__item-wrapper {
+                max-width: 38%;
+            }
+            .item {
+                height: 500px;
+    
+                &__techStack {
+                    left: 12.5px;
+                    padding: 10px 15px;
+                    p {
+                        font-size: 18px;
+                    }
+                }
+                &__subtitle {
+                    font-size: 24px;
+                }
+            }
+        }
+    
+        .stack {
+            flex-direction: column;
+            min-height: 900px;
+            align-items: center;
+            &__content {
+                width: 700px;
+                margin: 0 auto;
+            }
+    
+            &__svg {
+                width: 512px;
+                // width: 400px;
+            }
+        }
+    
+        .about {
+            flex-direction: column;
+            align-items: center;
+            &__content {
+                width: 700px;
+                margin: 0 auto 50px;
+            }
+        }
+        .contact {
+            h3 {
+                font-size: 32px;
+            }
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+    
+    @media (max-width: 850px) {
+        .projects {
+            overflow: hidden;
+            &__container {
+                width: 700px;
+            }
+            &__item-wrapper {
+                max-width: 38%;
+            }
+            .item {
+                height: 420px;
+    
+                &__techStack {
+                    padding: 10px 15px;
+                    width: 70%;
+                    left: 50%;
+                    border-radius: 5px;
+                    transform: translate(-50%, 0);
+                    p {
+                        font-size: 16px;
+                    }
+                }
+                &__subtitle {
+                    transition: 0.3s;
+                    font-size: 26px;
+                }
+            }
+        }
+    }
+    
+    @media (max-width: 800px) {
+        .stack, .about {
+            &__content {
+                width: 500px;
+            }
+        }
+    }
+    
+    @media(max-width: 750px) {
+        .projects {
+            &__container {
+                width: 600px;
+            }
+            &__item-wrapper {
+                max-width: 50%;
+            }
+            .item {
+                height: 420px;
+            }
+        }
+    }
+    
+    @media (max-width: 700px) {
+        .menu {
+            width: 85%;
+    
+            &__item {
+                display: none;
+            }
+        }
+        .stack, .about {
+            &__content {
+                p,strong {
+                    font-size: 16px;
+                }
+            }
+        }
+    
+        .stack {
+            &__svg {
+                display: none;
+            }
+        }
+        .contact {
+            h3 {
+                font-size: 30px;
+            }
+            p {
+                font-size: 14px;
+                margin-bottom: 30px;
+            }
+        }
+    
+    }
+    
+    @media (max-width: 650px) {
+        .projects-wrapper {
+            padding-bottom: 30px;
+        }
+        .projects {
+            &__container {
+                width: 450px;
+            }
+            &__item-wrapper {
+                max-width: 50%;
+            }
+            .item {
+                height: 380px;
+                &__techStack {
+                    width: 84%;
+                }
+            }
+        }
+    }
+    
+    @media (max-width: 550px) {
+        .stack, .about {
+            h3 {
+                font-size: 30px;
+            }
+            h4 {
+                font-size: 22px;
+            }
+            &__content {
+                width: 400px;
+            }
+        }
+        .about {
+            &__image {
+                height: 320px;
+                width: 320px;
+            }
+        }
+        .contact {
+            h3 {
+                margin: 50px 0 20px 0;
+            }
+        }
+        .footer {
+            p {
+                font-size: 10px;
+            }
+        }
+    }
+    
+    @media (max-width: 500px) {
+        .projects-wrapper {
+            height: 670px;
+        }
+        .projects {
+            &__container {
+                width: 390px;
+            }
+            &__item-wrapper {
+                max-width: 48%;
+            }
+            .item {
+                height: 310px;
+                &__techStack {
+                    p {
+                        font-size: 13px;
+                    }
+                }
+                &__subtitle {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    
+    @media (max-width: 450px) {
+        .stack, .about {
+            &__content {
+                width: 340px;
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+        .contact {
+            button {
+                width: 100px;
+                font-size: 14px;
+                padding: 10px 15px;
+            }
+        }
+    }
+    
+    @media (max-width: 430px) {
+        .projects {
+            &__container {
+                width: 340px;
+            }
+            &__item-wrapper {
+                max-width: 54%;
+            }
+            .item {
+                height: 300px;
+                &__techStack {
+                    width: 86%;
+                }
+            }
+        }
+    }
+    
+    @media (max-width: 380px) {
+        .stack, .about {
+            h3 {
+                font-size: 24px;
+            }
+            h4 {
+                font-size: 18px;
+            }
+            &__content {
+                width: 280px;
+                p,strong {
+                    font-size: 12px;
+                }
+            }
+            &__image {
+                height: 260px;
+                width: 260px;
+            }
+        }
+    }
+    
+    @media (max-width: 370px) {
+        .projects {
+            &__container {
+                width: 300px;
+            }
+            &__item-wrapper {
+                max-width: 54%;
+            }
+            .item {
+                height: 270px;
+                &__techStack {
+                    width: 86%;
+                    p {
+                        font-size: 10px;
+                    }
+                }
+                &__subtitle {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    
 }

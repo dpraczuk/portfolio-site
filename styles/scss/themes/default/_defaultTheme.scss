@@ -306,25 +306,36 @@ section.contact {
 .projects-wrapper {
     justify-content: center;
     padding-bottom: 100px;
+    margin: 0;
 }
 
 .projects {
     min-height: 80vh;
-    // margin-bottom: 100px;
+    margin: 0;
+    .swiper-slide-prev, .swiper-slide-next {
+        .item__subtitle {
+            opacity: 0;
+        }
+    }
+    .swiper-slide-active {
+        .item__subtitle {
+            opacity: 1;
+        }
+    }
 
     &__container {
-        display: flex;
-        flex-direction: row;
-        min-width: 1024px;
+        // display: flex;
+        // flex-direction: row;
+        width: 1024px;
         height: 100%;
-        justify-content: space-between;
         margin-top: 75px;
+        margin: 75px auto;
     }
 
     &__item-wrapper {
         // background-color: lightTheme.$container-color;
-        height: 45rem;
-        max-width: 31%;
+        // height: 0px;
+        max-width: 30%;
         gap: 15px;
         border-radius: 10px;
         flex-grow: 1;
@@ -367,6 +378,7 @@ section.contact {
                 &:hover {
                     transform: scale(1.05)
                 }
+                overflow:hidden;
             }
         }
 
@@ -376,12 +388,13 @@ section.contact {
         }
 
         &__subtitle {
+            transition: .3s;
             display: flex;
-            margin-top: 15px;
+            margin-top: 20px;
             font-size: 32px;
             justify-content: center;
             text-align: center;
-
+            opacity: 0;
         }
 
         &__techStack {
@@ -606,6 +619,7 @@ section.contact {
     }
 }
 
+
 @media (max-width: 1600px) {
 
     .header {
@@ -677,18 +691,18 @@ section.contact {
     }
 
     .projects-wrapper {
-        padding-bottom: 230px;
+        padding-bottom: 130px;
     }
 
     .projects {
         &__container {
-            min-width: 760px;
+            width: 820px;
         }
         &__item-wrapper {
-            height: 180px;
+            max-width: 38%;
         }
         .item {
-            height: 390px;
+            height: 500px;
 
             &__techStack {
                 left: 12.5px;
@@ -726,6 +740,44 @@ section.contact {
             margin: 0 auto 50px;
         }
     }
+    .contact {
+        h3 {
+            font-size: 32px;
+        }
+        p {
+            font-size: 16px;
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .projects {
+        overflow: hidden;
+        &__container {
+            width: 700px;
+        }
+        &__item-wrapper {
+            max-width: 38%;
+        }
+        .item {
+            height: 420px;
+
+            &__techStack {
+                padding: 10px 15px;
+                width: 70%;
+                left: 50%;
+                border-radius: 5px;
+                transform: translate(-50%, 0);
+                p {
+                    font-size: 16px;
+                }
+            }
+            &__subtitle {
+                transition: 0.3s;
+                font-size: 26px;
+            }
+        }
+    }
 }
 
 @media (max-width: 800px) {
@@ -736,28 +788,203 @@ section.contact {
     }
 }
 
+@media(max-width: 750px) {
+    .projects {
+        &__container {
+            width: 600px;
+        }
+        &__item-wrapper {
+            max-width: 50%;
+        }
+        .item {
+            height: 420px;
+        }
+    }
+}
+
 @media (max-width: 700px) {
     .menu {
         width: 85%;
-        &__list {
+
+        &__item {
             display: none;
         }
     }
     .stack, .about {
         &__content {
-            p {
-                font-size: 16px;
-            }
-            strong {
+            p,strong {
                 font-size: 16px;
             }
         }
     }
-}
-@media (max-width: 550px) {
+
     .stack {
+        &__svg {
+            display: none;
+        }
+    }
+    .contact {
+        h3 {
+            font-size: 30px;
+        }
+        p {
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+    }
+
+}
+
+@media (max-width: 650px) {
+    .projects-wrapper {
+        padding-bottom: 30px;
+    }
+    .projects {
+        &__container {
+            width: 450px;
+        }
+        &__item-wrapper {
+            max-width: 50%;
+        }
+        .item {
+            height: 380px;
+            &__techStack {
+                width: 84%;
+            }
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .stack, .about {
+        h3 {
+            font-size: 30px;
+        }
+        h4 {
+            font-size: 22px;
+        }
         &__content {
             width: 400px;
+        }
+    }
+    .about {
+        &__image {
+            height: 320px;
+            width: 320px;
+        }
+    }
+    .contact {
+        h3 {
+            margin: 50px 0 20px 0;
+        }
+    }
+    .footer {
+        p {
+            font-size: 10px;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .projects-wrapper {
+        height: 670px;
+    }
+    .projects {
+        &__container {
+            width: 390px;
+        }
+        &__item-wrapper {
+            max-width: 48%;
+        }
+        .item {
+            height: 310px;
+            &__techStack {
+                p {
+                    font-size: 13px;
+                }
+            }
+            &__subtitle {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .stack, .about {
+        &__content {
+            width: 340px;
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+    .contact {
+        button {
+            width: 100px;
+            font-size: 14px;
+            padding: 10px 15px;
+        }
+    }
+}
+
+@media (max-width: 430px) {
+    .projects {
+        &__container {
+            width: 340px;
+        }
+        &__item-wrapper {
+            max-width: 54%;
+        }
+        .item {
+            height: 300px;
+            &__techStack {
+                width: 86%;
+            }
+        }
+    }
+}
+
+@media (max-width: 380px) {
+    .stack, .about {
+        h3 {
+            font-size: 24px;
+        }
+        h4 {
+            font-size: 18px;
+        }
+        &__content {
+            width: 280px;
+            p,strong {
+                font-size: 12px;
+            }
+        }
+        &__image {
+            height: 260px;
+            width: 260px;
+        }
+    }
+}
+
+@media (max-width: 370px) {
+    .projects {
+        &__container {
+            width: 300px;
+        }
+        &__item-wrapper {
+            max-width: 54%;
+        }
+        .item {
+            height: 270px;
+            &__techStack {
+                width: 86%;
+                p {
+                    font-size: 10px;
+                }
+            }
+            &__subtitle {
+                font-size: 18px;
+            }
         }
     }
 }

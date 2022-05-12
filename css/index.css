@@ -313,29 +313,27 @@ section.contact {
       -ms-flex-pack: center;
           justify-content: center;
   padding-bottom: 100px;
+  margin: 0;
 }
 
 .projects {
   min-height: 80vh;
+  margin: 0;
+}
+.projects .swiper-slide-prev .item__subtitle, .projects .swiper-slide-next .item__subtitle {
+  opacity: 0;
+}
+.projects .swiper-slide-active .item__subtitle {
+  opacity: 1;
 }
 .projects__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  min-width: 1024px;
+  width: 1024px;
   height: 100%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   margin-top: 75px;
+  margin: 75px auto;
 }
 .projects__item-wrapper {
-  height: 45rem;
-  max-width: 31%;
+  max-width: 30%;
   gap: 15px;
   border-radius: 10px;
   -webkit-box-flex: 1;
@@ -382,6 +380,7 @@ section.contact {
   width: 100%;
   -webkit-transition: 0.7s;
   transition: 0.7s;
+  overflow: hidden;
 }
 .projects .item__image img:hover {
   -webkit-transform: scale(1.05);
@@ -391,15 +390,18 @@ section.contact {
   border: 2px solid #242423;
 }
 .projects .item__subtitle {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 15px;
+  margin-top: 20px;
   font-size: 32px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
+  opacity: 0;
 }
 .projects .item__techStack {
   position: absolute;
@@ -718,17 +720,17 @@ section.contact {
   }
 
   .projects-wrapper {
-    padding-bottom: 230px;
+    padding-bottom: 130px;
   }
 
   .projects__container {
-    min-width: 760px;
+    width: 820px;
   }
   .projects__item-wrapper {
-    height: 180px;
+    max-width: 38%;
   }
   .projects .item {
-    height: 390px;
+    height: 500px;
   }
   .projects .item__techStack {
     left: 12.5px;
@@ -772,30 +774,211 @@ section.contact {
     width: 700px;
     margin: 0 auto 50px;
   }
+
+  .contact h3 {
+    font-size: 32px;
+  }
+  .contact p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 850px) {
+  .projects {
+    overflow: hidden;
+  }
+  .projects__container {
+    width: 700px;
+  }
+  .projects__item-wrapper {
+    max-width: 38%;
+  }
+  .projects .item {
+    height: 420px;
+  }
+  .projects .item__techStack {
+    padding: 10px 15px;
+    width: 70%;
+    left: 50%;
+    border-radius: 5px;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+  .projects .item__techStack p {
+    font-size: 16px;
+  }
+  .projects .item__subtitle {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    font-size: 26px;
+  }
 }
 @media (max-width: 800px) {
   .stack__content, .about__content {
     width: 500px;
   }
 }
+@media (max-width: 750px) {
+  .projects__container {
+    width: 600px;
+  }
+  .projects__item-wrapper {
+    max-width: 50%;
+  }
+  .projects .item {
+    height: 420px;
+  }
+}
 @media (max-width: 700px) {
   .menu {
     width: 85%;
   }
-  .menu__list {
+  .menu__item {
     display: none;
   }
 
-  .stack__content p, .about__content p {
+  .stack__content p, .stack__content strong, .about__content p, .about__content strong {
     font-size: 16px;
   }
-  .stack__content strong, .about__content strong {
-    font-size: 16px;
+
+  .stack__svg {
+    display: none;
+  }
+
+  .contact h3 {
+    font-size: 30px;
+  }
+  .contact p {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 650px) {
+  .projects-wrapper {
+    padding-bottom: 30px;
+  }
+
+  .projects__container {
+    width: 450px;
+  }
+  .projects__item-wrapper {
+    max-width: 50%;
+  }
+  .projects .item {
+    height: 380px;
+  }
+  .projects .item__techStack {
+    width: 84%;
   }
 }
 @media (max-width: 550px) {
-  .stack__content {
+  .stack h3, .about h3 {
+    font-size: 30px;
+  }
+  .stack h4, .about h4 {
+    font-size: 22px;
+  }
+  .stack__content, .about__content {
     width: 400px;
+  }
+
+  .about__image {
+    height: 320px;
+    width: 320px;
+  }
+
+  .contact h3 {
+    margin: 50px 0 20px 0;
+  }
+
+  .footer p {
+    font-size: 10px;
+  }
+}
+@media (max-width: 500px) {
+  .projects-wrapper {
+    height: 670px;
+  }
+
+  .projects__container {
+    width: 390px;
+  }
+  .projects__item-wrapper {
+    max-width: 48%;
+  }
+  .projects .item {
+    height: 310px;
+  }
+  .projects .item__techStack p {
+    font-size: 13px;
+  }
+  .projects .item__subtitle {
+    font-size: 20px;
+  }
+}
+@media (max-width: 450px) {
+  .stack__content, .about__content {
+    width: 340px;
+  }
+  .stack__content p, .about__content p {
+    font-size: 14px;
+  }
+
+  .contact button {
+    width: 100px;
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+}
+@media (max-width: 430px) {
+  .projects__container {
+    width: 340px;
+  }
+  .projects__item-wrapper {
+    max-width: 54%;
+  }
+  .projects .item {
+    height: 300px;
+  }
+  .projects .item__techStack {
+    width: 86%;
+  }
+}
+@media (max-width: 380px) {
+  .stack h3, .about h3 {
+    font-size: 24px;
+  }
+  .stack h4, .about h4 {
+    font-size: 18px;
+  }
+  .stack__content, .about__content {
+    width: 280px;
+  }
+  .stack__content p, .stack__content strong, .about__content p, .about__content strong {
+    font-size: 12px;
+  }
+  .stack__image, .about__image {
+    height: 260px;
+    width: 260px;
+  }
+}
+@media (max-width: 370px) {
+  .projects__container {
+    width: 300px;
+  }
+  .projects__item-wrapper {
+    max-width: 54%;
+  }
+  .projects .item {
+    height: 270px;
+  }
+  .projects .item__techStack {
+    width: 86%;
+  }
+  .projects .item__techStack p {
+    font-size: 10px;
+  }
+  .projects .item__subtitle {
+    font-size: 18px;
   }
 }
 body.dark * {
@@ -963,4 +1146,308 @@ body.dark .contact button:hover {
 }
 body.dark .footer p {
   color: #FDFFFC;
+}
+@media (max-width: 1600px) {
+  body.dark .header__photo {
+    top: -40px;
+    right: -150px;
+  }
+  body.dark .header__photo img {
+    height: 590px;
+    width: 730px;
+  }
+}
+@media (max-width: 1360px) {
+  body.dark .header__photo {
+    top: 0px;
+    right: -80px;
+  }
+  body.dark .header__photo img {
+    height: 520px;
+    width: 630px;
+  }
+}
+@media (max-width: 1220px) {
+  body.dark .menu {
+    min-width: 0;
+    width: 80%;
+  }
+  body.dark .header__photo {
+    top: 40px;
+    right: 0px;
+  }
+  body.dark .header__photo img {
+    height: 440px;
+    width: 530px;
+  }
+}
+@media (max-width: 1200px) {
+  body.dark .side-nav-wrapper {
+    display: none;
+  }
+}
+@media (max-width: 1060px) {
+  body.dark .header {
+    width: 80%;
+  }
+  body.dark .header__introduction {
+    width: 80%;
+  }
+  body.dark .header__photo {
+    display: none;
+    top: 0px;
+    right: -80px;
+  }
+  body.dark .header__photo img {
+    height: 520px;
+    width: 630px;
+  }
+  body.dark .projects-wrapper {
+    padding-bottom: 130px;
+  }
+  body.dark .projects__container {
+    width: 820px;
+  }
+  body.dark .projects__item-wrapper {
+    max-width: 38%;
+  }
+  body.dark .projects .item {
+    height: 500px;
+  }
+  body.dark .projects .item__techStack {
+    left: 12.5px;
+    padding: 10px 15px;
+  }
+  body.dark .projects .item__techStack p {
+    font-size: 18px;
+  }
+  body.dark .projects .item__subtitle {
+    font-size: 24px;
+  }
+  body.dark .stack {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-height: 900px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body.dark .stack__content {
+    width: 700px;
+    margin: 0 auto;
+  }
+  body.dark .stack__svg {
+    width: 512px;
+  }
+  body.dark .about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body.dark .about__content {
+    width: 700px;
+    margin: 0 auto 50px;
+  }
+  body.dark .contact h3 {
+    font-size: 32px;
+  }
+  body.dark .contact p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 850px) {
+  body.dark .projects {
+    overflow: hidden;
+  }
+  body.dark .projects__container {
+    width: 700px;
+  }
+  body.dark .projects__item-wrapper {
+    max-width: 38%;
+  }
+  body.dark .projects .item {
+    height: 420px;
+  }
+  body.dark .projects .item__techStack {
+    padding: 10px 15px;
+    width: 70%;
+    left: 50%;
+    border-radius: 5px;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+  body.dark .projects .item__techStack p {
+    font-size: 16px;
+  }
+  body.dark .projects .item__subtitle {
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    font-size: 26px;
+  }
+}
+@media (max-width: 800px) {
+  body.dark .stack__content, body.dark .about__content {
+    width: 500px;
+  }
+}
+@media (max-width: 750px) {
+  body.dark .projects__container {
+    width: 600px;
+  }
+  body.dark .projects__item-wrapper {
+    max-width: 50%;
+  }
+  body.dark .projects .item {
+    height: 420px;
+  }
+}
+@media (max-width: 700px) {
+  body.dark .menu {
+    width: 85%;
+  }
+  body.dark .menu__item {
+    display: none;
+  }
+  body.dark .stack__content p, body.dark .stack__content strong, body.dark .about__content p, body.dark .about__content strong {
+    font-size: 16px;
+  }
+  body.dark .stack__svg {
+    display: none;
+  }
+  body.dark .contact h3 {
+    font-size: 30px;
+  }
+  body.dark .contact p {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 650px) {
+  body.dark .projects-wrapper {
+    padding-bottom: 30px;
+  }
+  body.dark .projects__container {
+    width: 450px;
+  }
+  body.dark .projects__item-wrapper {
+    max-width: 50%;
+  }
+  body.dark .projects .item {
+    height: 380px;
+  }
+  body.dark .projects .item__techStack {
+    width: 84%;
+  }
+}
+@media (max-width: 550px) {
+  body.dark .stack h3, body.dark .about h3 {
+    font-size: 30px;
+  }
+  body.dark .stack h4, body.dark .about h4 {
+    font-size: 22px;
+  }
+  body.dark .stack__content, body.dark .about__content {
+    width: 400px;
+  }
+  body.dark .about__image {
+    height: 320px;
+    width: 320px;
+  }
+  body.dark .contact h3 {
+    margin: 50px 0 20px 0;
+  }
+  body.dark .footer p {
+    font-size: 10px;
+  }
+}
+@media (max-width: 500px) {
+  body.dark .projects-wrapper {
+    height: 670px;
+  }
+  body.dark .projects__container {
+    width: 390px;
+  }
+  body.dark .projects__item-wrapper {
+    max-width: 48%;
+  }
+  body.dark .projects .item {
+    height: 310px;
+  }
+  body.dark .projects .item__techStack p {
+    font-size: 13px;
+  }
+  body.dark .projects .item__subtitle {
+    font-size: 20px;
+  }
+}
+@media (max-width: 450px) {
+  body.dark .stack__content, body.dark .about__content {
+    width: 340px;
+  }
+  body.dark .stack__content p, body.dark .about__content p {
+    font-size: 14px;
+  }
+  body.dark .contact button {
+    width: 100px;
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+}
+@media (max-width: 430px) {
+  body.dark .projects__container {
+    width: 340px;
+  }
+  body.dark .projects__item-wrapper {
+    max-width: 54%;
+  }
+  body.dark .projects .item {
+    height: 300px;
+  }
+  body.dark .projects .item__techStack {
+    width: 86%;
+  }
+}
+@media (max-width: 380px) {
+  body.dark .stack h3, body.dark .about h3 {
+    font-size: 24px;
+  }
+  body.dark .stack h4, body.dark .about h4 {
+    font-size: 18px;
+  }
+  body.dark .stack__content, body.dark .about__content {
+    width: 280px;
+  }
+  body.dark .stack__content p, body.dark .stack__content strong, body.dark .about__content p, body.dark .about__content strong {
+    font-size: 12px;
+  }
+  body.dark .stack__image, body.dark .about__image {
+    height: 260px;
+    width: 260px;
+  }
+}
+@media (max-width: 370px) {
+  body.dark .projects__container {
+    width: 300px;
+  }
+  body.dark .projects__item-wrapper {
+    max-width: 54%;
+  }
+  body.dark .projects .item {
+    height: 270px;
+  }
+  body.dark .projects .item__techStack {
+    width: 86%;
+  }
+  body.dark .projects .item__techStack p {
+    font-size: 10px;
+  }
+  body.dark .projects .item__subtitle {
+    font-size: 18px;
+  }
 }/*# sourceMappingURL=index.css.map */
