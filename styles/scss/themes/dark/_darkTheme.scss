@@ -676,6 +676,9 @@ body.dark {
     }
     
     @media (max-width: 430px) {
+        .projects-wrapper {
+            height: 740px;
+        }
         .projects {
             &__container {
                 width: 340px;

@@ -1570,6 +1570,9 @@ body.dark .footer p {
   }
 }
 @media (max-width: 430px) {
+  body.dark .projects-wrapper {
+    height: 740px;
+  }
   body.dark .projects__container {
     width: 340px;
   }
