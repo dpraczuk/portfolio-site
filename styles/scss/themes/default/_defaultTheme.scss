@@ -1002,7 +1002,7 @@ section.contact {
 
 @media (max-width: 500px) {
     .projects-wrapper {
-        height: 80vh;
+        height: 84vh;
     }
     .projects {
         &__container {
@@ -1083,8 +1083,12 @@ section.contact {
 }
 
 @media (max-width: 380px) {
+    .projects-wrapper {
+        height: 105vh;
+    }
     .header {
-        min-height: 60vh;
+        min-height: 65vh;
+        
         &__introduction {
             span {
                 margin-top: 0;

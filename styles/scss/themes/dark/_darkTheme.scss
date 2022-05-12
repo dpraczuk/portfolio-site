@@ -285,10 +285,6 @@ body.dark {
         .header {
             width: 80%;
             &__introduction {
-                // top: 0;
-                // left: 50%;
-                // transform: translate(-50%, 0);
-                // width: 500px;
                 h1,span {
                     font-size: 58px;
                 }
@@ -303,7 +299,6 @@ body.dark {
                 }
             }
             &__photo {
-                // display: none;
                 top: 0px;
                 right: -150px;
                 img {
@@ -342,16 +337,17 @@ body.dark {
     
         .stack {
             flex-direction: column;
-            min-height: 900px;
+            min-height: 120vh;
             align-items: center;
+    
             &__content {
                 width: 700px;
-                margin: 0 auto;
+                margin: 0 auto 60px;
             }
     
             &__svg {
                 width: 512px;
-                // width: 400px;
+                margin-bottom: 100px;
             }
         }
     
@@ -472,11 +468,62 @@ body.dark {
             }
         }
     
-        .stack {
-            &__svg {
-                display: none;
-            }
-        }
+        // .stack {
+        //     min-height: 90vh;
+        //     &__svg {
+        //         width: 380px;
+        //         height: 380px;
+        //     }
+        // //CSS
+        // &__icon--active:nth-child(2) {
+        //     height: 30px;
+        //     width: 30px;
+        //     top: 130px;
+        //     left: 230px;
+        // }
+    
+        // //GIT
+        // &__icon--active:nth-child(3) {
+        //     height: 34px;
+        //     width: 34px;
+        //     top: 30px;
+        //     left: 240px;
+        // }
+    
+    
+        // //HTML
+        // &__icon--active:nth-child(4) {
+        //     height: 30px;
+        //     width: 30px;
+        //     top: 115px;
+        //     left: 165px;
+        // }
+    
+        // //JS
+        // &__icon--active:nth-child(5) {
+        //     height: 30px;
+        //     width: 30px;
+        //     top: 55px;
+        //     left: 175px;
+        // }
+    
+        // //React
+        // &__icon--active:nth-child(6) {
+        //     height: 32px;
+        //     width: 32px;
+        //     top: 80px;
+        //     left: 235px;
+        // }
+    
+        // //Sass
+        // &__icon--active:nth-child(7) {
+        //     height: 30px;
+        //     width: 30px;
+        //     top: 90px;
+        //     left: 300px;
+        // }
+    
+        // }
         .contact {
             h3 {
                 font-size: 30px;
@@ -534,7 +581,7 @@ body.dark {
     }
     
     @media (max-width: 550px) {
-        .stack, .about {
+        .stack, .about, .projects {
             h3 {
                 font-size: 30px;
             }
@@ -565,7 +612,7 @@ body.dark {
     
     @media (max-width: 500px) {
         .projects-wrapper {
-            height: 670px;
+            height: 84vh;
         }
         .projects {
             &__container {
@@ -584,6 +631,13 @@ body.dark {
                 &__subtitle {
                     font-size: 20px;
                 }
+            }
+        }
+        .stack {
+            min-height: 0;
+            margin: 55px 0 0 0;
+            &__svg {
+                display: none;
             }
         }
     }
@@ -639,8 +693,12 @@ body.dark {
     }
     
     @media (max-width: 380px) {
+        .projects-wrapper {
+            height: 105vh;
+        }
         .header {
-            min-height: 60vh;
+            min-height: 65vh;
+            
             &__introduction {
                 span {
                     margin-top: 0;
@@ -673,11 +731,69 @@ body.dark {
                     font-size: 12px;
                 }
             }
-            &__image {
-                height: 260px;
-                width: 260px;
-            }
         }
+        
+        // .stack { 
+        //     min-height: 80vh;
+        //     &__svg {
+        //         width: 300px;
+        //     }
+        //     //CSS
+        //     &__icon--active:nth-child(2) {
+        //         height: 24px;
+        //         width: 24px;
+        //         top: 105px;
+        //         left: 185px;
+        //     }
+        
+        //     //GIT
+        //     &__icon--active:nth-child(3) {
+        //         height: 26px;
+        //         width: 26px;
+        //         top: 25px;
+        //         left: 192px;
+        //         animation-delay: 0.5s;
+        //     }
+        
+        
+        //     //HTML
+        //     &__icon--active:nth-child(4) {
+        //         height: 24px;
+        //         width: 24px;
+        //         top: 90px;
+        //         left: 135px;
+        //         animation-delay: 1s;
+        //     }
+        
+        //     //JS
+        //     &__icon--active:nth-child(5) {
+        //         height: 24px;
+        //         width: 24px;
+        //         top: 47px;
+        //         left: 143px;
+        //         animation-delay: 1.5s;
+        //     }
+        
+        //     //React
+        //     &__icon--active:nth-child(6) {
+        //         height: 26px;
+        //         width: 26px;
+        //         top: 65px;
+        //         left: 185px;
+        //         animation-delay: 2s;
+        //     }
+        
+        //     //Sass
+        //     &__icon--active:nth-child(7) {
+        //         height: 26px;
+        //         width: 26px;
+        //         top: 70px;
+        //         left: 237px;
+        //         animation-delay: 2.5s;
+        //     }
+        // }
+        
+    
     }
     
     @media (max-width: 370px) {
@@ -702,5 +818,6 @@ body.dark {
             }
         }
     }
+    
     
 }
