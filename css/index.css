@@ -136,18 +136,18 @@ section.contact {
   color: #9B9B9B;
 }
 .header__introduction p {
-  margin: 45px 0 0 5px;
-  font-size: 24px;
+  margin: 35px 0 0 5px;
+  font-size: 22px;
   font-weight: 300;
   color: #636367;
   font-family: "Inter";
   max-width: 500px;
 }
 .header__introduction button {
-  padding: 6px 32px;
+  padding: 10px 32px;
   background-color: #FDCA40;
   border: 2px solid #FDCA40;
-  border-radius: 16px;
+  border-radius: 3px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   cursor: pointer;
@@ -706,17 +706,25 @@ section.contact {
   .header {
     width: 80%;
   }
-  .header__introduction {
-    width: 80%;
+  .header__introduction h1, .header__introduction span {
+    font-size: 58px;
+  }
+  .header__introduction h2 {
+    font-size: 36px;
+  }
+  .header__introduction p {
+    font-size: 18px;
+    width: 400px;
+    margin: 25px 0 0 3px;
+    font-family: "Poppins";
   }
   .header__photo {
-    display: none;
     top: 0px;
-    right: -80px;
+    right: -150px;
   }
   .header__photo img {
-    height: 520px;
-    width: 630px;
+    height: 450px;
+    width: 550px;
   }
 
   .projects-wrapper {
@@ -780,6 +788,36 @@ section.contact {
   }
   .contact p {
     font-size: 16px;
+  }
+}
+@media (max-width: 980px) {
+  .header-wrapper {
+    background: none;
+  }
+
+  .header__photo {
+    display: none;
+  }
+  .header__introduction {
+    top: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    width: 90%;
+  }
+  .header__introduction h1, .header__introduction span {
+    font-size: 64px;
+  }
+  .header__introduction h2 {
+    font-size: 38px;
+  }
+  .header__introduction p {
+    font-size: 22px;
+    width: 100%;
+  }
+
+  .projects {
+    margin-top: 70px;
   }
 }
 @media (max-width: 850px) {
@@ -870,6 +908,27 @@ section.contact {
     width: 84%;
   }
 }
+@media (max-width: 600px) {
+  .header__introduction {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .header__introduction h1, .header__introduction span {
+    font-size: 54px;
+  }
+  .header__introduction h2 {
+    font-size: 32px;
+  }
+  .header__introduction p {
+    width: 300px;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  .header__introduction button {
+    padding: 8px 24px;
+    font-size: 18px;
+  }
+}
 @media (max-width: 550px) {
   .stack h3, .about h3 {
     font-size: 30px;
@@ -916,6 +975,20 @@ section.contact {
   }
 }
 @media (max-width: 450px) {
+  .header {
+    max-height: 60vh;
+  }
+  .header__introduction h1, .header__introduction span {
+    font-size: 44px;
+  }
+  .header__introduction h2 {
+    font-size: 28px;
+  }
+  .header__introduction p {
+    font-size: 16px;
+    margin-top: 15px;
+  }
+
   .stack__content, .about__content {
     width: 340px;
   }
@@ -944,6 +1017,26 @@ section.contact {
   }
 }
 @media (max-width: 380px) {
+  .header {
+    min-height: 60vh;
+  }
+  .header__introduction span {
+    margin-top: 0;
+  }
+  .header__introduction h1, .header__introduction span {
+    font-size: 38px;
+  }
+  .header__introduction h2 {
+    font-size: 26px;
+    margin: 0;
+  }
+  .header__introduction p {
+    margin-left: 0;
+  }
+  .header__introduction button {
+    margin-left: 3px;
+  }
+
   .stack h3, .about h3 {
     font-size: 24px;
   }
@@ -1018,6 +1111,9 @@ body.dark header.header p,
 body.dark .about p,
 body.dark section.contact p {
   color: #FDFFFC;
+}
+body.dark .header-wrapper {
+  border: none;
 }
 body.dark .header__introduction h1,
 body.dark .header__introduction h2 {
@@ -1190,17 +1286,25 @@ body.dark .footer p {
   body.dark .header {
     width: 80%;
   }
-  body.dark .header__introduction {
-    width: 80%;
+  body.dark .header__introduction h1, body.dark .header__introduction span {
+    font-size: 58px;
+  }
+  body.dark .header__introduction h2 {
+    font-size: 36px;
+  }
+  body.dark .header__introduction p {
+    font-size: 18px;
+    width: 400px;
+    margin: 25px 0 0 3px;
+    font-family: "Poppins";
   }
   body.dark .header__photo {
-    display: none;
     top: 0px;
-    right: -80px;
+    right: -150px;
   }
   body.dark .header__photo img {
-    height: 520px;
-    width: 630px;
+    height: 450px;
+    width: 550px;
   }
   body.dark .projects-wrapper {
     padding-bottom: 130px;
@@ -1259,6 +1363,34 @@ body.dark .footer p {
   }
   body.dark .contact p {
     font-size: 16px;
+  }
+}
+@media (max-width: 980px) {
+  body.dark .header-wrapper {
+    background: #1f1f1e;
+  }
+  body.dark .header__photo {
+    display: none;
+  }
+  body.dark .header__introduction {
+    top: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    width: 90%;
+  }
+  body.dark .header__introduction h1, body.dark .header__introduction span {
+    font-size: 64px;
+  }
+  body.dark .header__introduction h2 {
+    font-size: 38px;
+  }
+  body.dark .header__introduction p {
+    font-size: 22px;
+    width: 100%;
+  }
+  body.dark .projects {
+    margin-top: 70px;
   }
 }
 @media (max-width: 850px) {
@@ -1345,6 +1477,27 @@ body.dark .footer p {
     width: 84%;
   }
 }
+@media (max-width: 600px) {
+  body.dark .header__introduction {
+    width: 100%;
+    margin: 0 auto;
+  }
+  body.dark .header__introduction h1, body.dark .header__introduction span {
+    font-size: 54px;
+  }
+  body.dark .header__introduction h2 {
+    font-size: 32px;
+  }
+  body.dark .header__introduction p {
+    width: 300px;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  body.dark .header__introduction button {
+    padding: 8px 24px;
+    font-size: 18px;
+  }
+}
 @media (max-width: 550px) {
   body.dark .stack h3, body.dark .about h3 {
     font-size: 30px;
@@ -1387,6 +1540,19 @@ body.dark .footer p {
   }
 }
 @media (max-width: 450px) {
+  body.dark .header {
+    max-height: 60vh;
+  }
+  body.dark .header__introduction h1, body.dark .header__introduction span {
+    font-size: 44px;
+  }
+  body.dark .header__introduction h2 {
+    font-size: 28px;
+  }
+  body.dark .header__introduction p {
+    font-size: 16px;
+    margin-top: 15px;
+  }
   body.dark .stack__content, body.dark .about__content {
     width: 340px;
   }
@@ -1414,6 +1580,25 @@ body.dark .footer p {
   }
 }
 @media (max-width: 380px) {
+  body.dark .header {
+    min-height: 60vh;
+  }
+  body.dark .header__introduction span {
+    margin-top: 0;
+  }
+  body.dark .header__introduction h1, body.dark .header__introduction span {
+    font-size: 38px;
+  }
+  body.dark .header__introduction h2 {
+    font-size: 26px;
+    margin: 0;
+  }
+  body.dark .header__introduction p {
+    margin-left: 0;
+  }
+  body.dark .header__introduction button {
+    margin-left: 3px;
+  }
   body.dark .stack h3, body.dark .about h3 {
     font-size: 24px;
   }
