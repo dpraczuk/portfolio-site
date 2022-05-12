@@ -1066,6 +1066,9 @@ section.contact {
 }
 
 @media (max-width: 430px) {
+    .projects-wrapper {
+        height: 760px;
+    }
     .projects {
         &__container {
             width: 340px;
@@ -1083,12 +1086,12 @@ section.contact {
 }
 
 @media (max-width: 380px) {
-    .projects-wrapper {
-        height: 105vh;
-    }
+    // .projects-wrapper {
+    //     height: 105vh;
+    // }
     .header {
         min-height: 65vh;
-        
+
         &__introduction {
             span {
                 margin-top: 0;
