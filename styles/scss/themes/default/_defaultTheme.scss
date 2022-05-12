@@ -858,62 +858,62 @@ section.contact {
         }
     }
 
-    .stack {
-        min-height: 90vh;
-        &__svg {
-            width: 380px;
-            height: 380px;
-        }
-    //CSS
-    &__icon--active:nth-child(2) {
-        height: 30px;
-        width: 30px;
-        top: 130px;
-        left: 230px;
-    }
+    // .stack {
+    //     min-height: 90vh;
+    //     &__svg {
+    //         width: 380px;
+    //         height: 380px;
+    //     }
+    // //CSS
+    // &__icon--active:nth-child(2) {
+    //     height: 30px;
+    //     width: 30px;
+    //     top: 130px;
+    //     left: 230px;
+    // }
 
-    //GIT
-    &__icon--active:nth-child(3) {
-        height: 34px;
-        width: 34px;
-        top: 30px;
-        left: 240px;
-    }
+    // //GIT
+    // &__icon--active:nth-child(3) {
+    //     height: 34px;
+    //     width: 34px;
+    //     top: 30px;
+    //     left: 240px;
+    // }
 
 
-    //HTML
-    &__icon--active:nth-child(4) {
-        height: 30px;
-        width: 30px;
-        top: 115px;
-        left: 165px;
-    }
+    // //HTML
+    // &__icon--active:nth-child(4) {
+    //     height: 30px;
+    //     width: 30px;
+    //     top: 115px;
+    //     left: 165px;
+    // }
 
-    //JS
-    &__icon--active:nth-child(5) {
-        height: 30px;
-        width: 30px;
-        top: 55px;
-        left: 175px;
-    }
+    // //JS
+    // &__icon--active:nth-child(5) {
+    //     height: 30px;
+    //     width: 30px;
+    //     top: 55px;
+    //     left: 175px;
+    // }
 
-    //React
-    &__icon--active:nth-child(6) {
-        height: 32px;
-        width: 32px;
-        top: 80px;
-        left: 235px;
-    }
+    // //React
+    // &__icon--active:nth-child(6) {
+    //     height: 32px;
+    //     width: 32px;
+    //     top: 80px;
+    //     left: 235px;
+    // }
 
-    //Sass
-    &__icon--active:nth-child(7) {
-        height: 30px;
-        width: 30px;
-        top: 90px;
-        left: 300px;
-    }
+    // //Sass
+    // &__icon--active:nth-child(7) {
+    //     height: 30px;
+    //     width: 30px;
+    //     top: 90px;
+    //     left: 300px;
+    // }
 
-    }
+    // }
     .contact {
         h3 {
             font-size: 30px;
@@ -1023,9 +1023,18 @@ section.contact {
             }
         }
     }
+    .stack {
+        min-height: 0;
+        &__svg {
+            display: none;
+        }
+    }
 }
 
 @media (max-width: 450px) {
+    .stack {
+        min-height: 100vh;
+    }
     .header {
         max-height: 60vh;
         &__introduction {
@@ -1112,61 +1121,65 @@ section.contact {
         }
     }
     
-    .stack { 
-        min-height: 75vh;
-        &__svg {
-            // height: 300px;
-            width: 300px;
-        }
-        //CSS
-        &__icon--active:nth-child(2) {
-            height: 24px;
-            width: 24px;
-            top: 105px;
-            left: 185px;
-        }
+    // .stack { 
+    //     min-height: 80vh;
+    //     &__svg {
+    //         width: 300px;
+    //     }
+    //     //CSS
+    //     &__icon--active:nth-child(2) {
+    //         height: 24px;
+    //         width: 24px;
+    //         top: 105px;
+    //         left: 185px;
+    //     }
     
-        //GIT
-        &__icon--active:nth-child(3) {
-            height: 26px;
-            width: 26px;
-            top: 25px;
-            left: 192px;
-        }
+    //     //GIT
+    //     &__icon--active:nth-child(3) {
+    //         height: 26px;
+    //         width: 26px;
+    //         top: 25px;
+    //         left: 192px;
+    //         animation-delay: 0.5s;
+    //     }
     
     
-        //HTML
-        &__icon--active:nth-child(4) {
-            height: 24px;
-            width: 24px;
-            top: 90px;
-            left: 135px;
-        }
+    //     //HTML
+    //     &__icon--active:nth-child(4) {
+    //         height: 24px;
+    //         width: 24px;
+    //         top: 90px;
+    //         left: 135px;
+    //         animation-delay: 1s;
+    //     }
     
-        //JS
-        &__icon--active:nth-child(5) {
-            height: 24px;
-            width: 24px;
-            top: 47px;
-            left: 143px;
-        }
+    //     //JS
+    //     &__icon--active:nth-child(5) {
+    //         height: 24px;
+    //         width: 24px;
+    //         top: 47px;
+    //         left: 143px;
+    //         animation-delay: 1.5s;
+    //     }
     
-        //React
-        &__icon--active:nth-child(6) {
-            height: 26px;
-            width: 26px;
-            top: 65px;
-            left: 185px;
-        }
+    //     //React
+    //     &__icon--active:nth-child(6) {
+    //         height: 26px;
+    //         width: 26px;
+    //         top: 65px;
+    //         left: 185px;
+    //         animation-delay: 2s;
+    //     }
     
-        //Sass
-        &__icon--active:nth-child(7) {
-            height: 26px;
-            width: 26px;
-            top: 70px;
-            left: 237px;
-        }
-    }
+    //     //Sass
+    //     &__icon--active:nth-child(7) {
+    //         height: 26px;
+    //         width: 26px;
+    //         top: 70px;
+    //         left: 237px;
+    //         animation-delay: 2.5s;
+    //     }
+    // }
     
 
 }
