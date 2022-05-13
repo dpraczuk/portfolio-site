@@ -224,6 +224,29 @@ body.dark {
     .footer {
         p {
             color: darkTheme.$text-color;
+            font-weight: 400;
+        }
+        // .bottom-nav-wrapper {
+        //     display: flex;
+        //     margin: 40px 0 40px;
+        //     justify-content: space-between;
+        //     gap: 60px;
+        // }
+        .bottom-nav {
+            &__item {
+                svg {
+                    width: 30px;
+                    height: 30px;
+                    filter: invert(93%) sepia(14%) saturate(312%) hue-rotate(67deg) brightness(111%) contrast(105%);
+                }
+
+                &:hover {
+                    svg {
+                        filter: invert(79%) sepia(21%) saturate(1452%) hue-rotate(344deg) brightness(108%) contrast(98%);
+                    }
+                }
+                
+            }
         }
     }
 
@@ -605,7 +628,7 @@ body.dark {
         }
         .footer {
             p {
-                font-size: 10px;
+                font-size: 12px;
             }
         }
     }
@@ -805,10 +828,10 @@ body.dark {
                 width: 300px;
             }
             &__item-wrapper {
-                max-width: 54%;
+                max-width: 64%;
             }
             .item {
-                height: 270px;
+                height: 310px;
                 &__techStack {
                     width: 86%;
                     p {

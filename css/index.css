@@ -655,8 +655,31 @@ section.contact {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+.footer .bottom-nav-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 40px 0 40px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 60px;
+}
+.footer .bottom-nav__item svg {
+  width: 30px;
+  height: 30px;
+  -webkit-filter: invert(41%) sepia(5%) saturate(256%) hue-rotate(201deg) brightness(90%) contrast(91%);
+          filter: invert(41%) sepia(5%) saturate(256%) hue-rotate(201deg) brightness(90%) contrast(91%);
+}
+.footer .bottom-nav__item:hover svg {
+  -webkit-filter: invert(79%) sepia(21%) saturate(1452%) hue-rotate(344deg) brightness(108%) contrast(98%);
+          filter: invert(79%) sepia(21%) saturate(1452%) hue-rotate(344deg) brightness(108%) contrast(98%);
+}
 .footer p {
-  font-size: 13px;
+  text-align: center;
+  font-size: 15px;
+  margin-top: 50px;
+  font-weight: 400;
 }
 
 @media (max-width: 1600px) {
@@ -943,8 +966,12 @@ section.contact {
     margin: 50px 0 20px 0;
   }
 
+  .footer .bottom-nav-wrapper {
+    margin: 25px 0 30px;
+    gap: 40px;
+  }
   .footer p {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 @media (max-width: 500px) {
@@ -1006,7 +1033,7 @@ section.contact {
 }
 @media (max-width: 430px) {
   .projects-wrapper {
-    height: 760px;
+    height: 740px;
   }
 
   .projects__container {
@@ -1241,6 +1268,17 @@ body.dark .contact button:hover {
 }
 body.dark .footer p {
   color: #FDFFFC;
+  font-weight: 400;
+}
+body.dark .footer .bottom-nav__item svg {
+  width: 30px;
+  height: 30px;
+  -webkit-filter: invert(93%) sepia(14%) saturate(312%) hue-rotate(67deg) brightness(111%) contrast(105%);
+          filter: invert(93%) sepia(14%) saturate(312%) hue-rotate(67deg) brightness(111%) contrast(105%);
+}
+body.dark .footer .bottom-nav__item:hover svg {
+  -webkit-filter: invert(79%) sepia(21%) saturate(1452%) hue-rotate(344deg) brightness(108%) contrast(98%);
+          filter: invert(79%) sepia(21%) saturate(1452%) hue-rotate(344deg) brightness(108%) contrast(98%);
 }
 @media (max-width: 1600px) {
   body.dark .header__photo {
@@ -1513,7 +1551,7 @@ body.dark .footer p {
     margin: 50px 0 20px 0;
   }
   body.dark .footer p {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 @media (max-width: 500px) {
@@ -1627,10 +1665,10 @@ body.dark .footer p {
     width: 300px;
   }
   body.dark .projects__item-wrapper {
-    max-width: 54%;
+    max-width: 64%;
   }
   body.dark .projects .item {
-    height: 270px;
+    height: 310px;
   }
   body.dark .projects .item__techStack {
     width: 86%;
