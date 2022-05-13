@@ -751,6 +751,9 @@ section.contact {
     padding-bottom: 130px;
   }
 
+  .projects .swiper-slide-active .item {
+    border: 2px solid #585858;
+  }
   .projects__container {
     width: 820px;
   }
@@ -1360,6 +1363,9 @@ body.dark .footer .bottom-nav__item:hover svg {
   }
   body.dark .projects-wrapper {
     padding-bottom: 130px;
+  }
+  body.dark .projects .swiper-slide-active .item {
+    border: 2px solid #FDFFFC;
   }
   body.dark .projects__container {
     width: 820px;

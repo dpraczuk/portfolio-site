@@ -336,6 +336,11 @@ body.dark {
         }
     
         .projects {
+            .swiper-slide-active {
+                .item {
+                    border: 2px solid #FDFFFC;
+                }
+            }
             &__container {
                 width: 820px;
             }

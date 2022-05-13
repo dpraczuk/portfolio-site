@@ -727,6 +727,11 @@ section.contact {
     }
 
     .projects {
+        .swiper-slide-active {
+            .item {
+                border: 2px solid #585858;
+            }
+        }
         &__container {
             width: 820px;
         }
