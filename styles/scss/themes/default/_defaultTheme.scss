@@ -727,16 +727,6 @@ section.contact {
     }
 
     .projects {
-        .swiper-slide-active {
-            .item {
-                border: 2px solid #585858;
-            }
-        }
-        .swiper-slide-prev, .swiper-slide-next {
-            .item__subtitle {
-                border: 2px solid #cacaca;
-            }
-        }
         &__container {
             width: 820px;
         }
@@ -745,6 +735,9 @@ section.contact {
         }
         .item {
             height: 500px;
+            &:hover {
+                border: 2px solid #cecece;
+            }
 
             &__techStack {
                 display: block;
@@ -760,9 +753,6 @@ section.contact {
         }
     }
     .projects .mobile {
-        &:hover {
-            pointer-events: none;
-        }
         .item {
             &__techStack {
                 display: none;

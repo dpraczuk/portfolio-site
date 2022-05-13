@@ -751,12 +751,6 @@ section.contact {
     padding-bottom: 130px;
   }
 
-  .projects .swiper-slide-active .item {
-    border: 2px solid #585858;
-  }
-  .projects .swiper-slide-prev .item__subtitle, .projects .swiper-slide-next .item__subtitle {
-    border: 2px solid #cacaca;
-  }
   .projects__container {
     width: 820px;
   }
@@ -765,6 +759,9 @@ section.contact {
   }
   .projects .item {
     height: 500px;
+  }
+  .projects .item:hover {
+    border: 2px solid #cecece;
   }
   .projects .item__techStack {
     display: block;
@@ -778,9 +775,6 @@ section.contact {
     font-size: 24px;
   }
 
-  .projects .mobile:hover {
-    pointer-events: none;
-  }
   .projects .mobile .item__techStack {
     display: none;
   }
@@ -1366,12 +1360,6 @@ body.dark .footer .bottom-nav__item:hover svg {
   }
   body.dark .projects-wrapper {
     padding-bottom: 130px;
-  }
-  body.dark .projects .swiper-slide-active .item {
-    border: 2px solid #FDFFFC;
-  }
-  body.dark .projects .swiper-slide-prev .item__subtitle, body.dark .projects .swiper-slide-next .item__subtitle {
-    border: 2px solid #1f1f1e;
   }
   body.dark .projects__container {
     width: 820px;

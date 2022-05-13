@@ -336,16 +336,6 @@ body.dark {
         }
     
         .projects {
-            .swiper-slide-active {
-                .item {
-                    border: 2px solid #FDFFFC;
-                }
-            }
-            .swiper-slide-prev, .swiper-slide-next {
-                .item__subtitle {
-                    border: 2px solid darkTheme.$base-bkg;
-                }
-            }
             &__container {
                 width: 820px;
             }
