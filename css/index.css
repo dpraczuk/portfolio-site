@@ -754,6 +754,9 @@ section.contact {
   .projects .swiper-slide-active .item {
     border: 2px solid #585858;
   }
+  .projects .swiper-slide-prev .item__subtitle, .projects .swiper-slide-next .item__subtitle {
+    border: 2px solid #cacaca;
+  }
   .projects__container {
     width: 820px;
   }
@@ -1366,6 +1369,9 @@ body.dark .footer .bottom-nav__item:hover svg {
   }
   body.dark .projects .swiper-slide-active .item {
     border: 2px solid #FDFFFC;
+  }
+  body.dark .projects .swiper-slide-prev .item__subtitle, body.dark .projects .swiper-slide-next .item__subtitle {
+    border: 2px solid #1f1f1e;
   }
   body.dark .projects__container {
     width: 820px;
