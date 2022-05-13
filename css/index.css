@@ -1371,7 +1371,7 @@ body.dark .footer .bottom-nav__item:hover svg {
     height: 500px;
   }
   body.dark .projects .item:hover {
-    border: 2px solid #1f1f1e;
+    border: 2px solid #FDFFFC;
   }
   body.dark .projects .item__techStack {
     left: 12.5px;

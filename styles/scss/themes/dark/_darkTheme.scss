@@ -345,7 +345,7 @@ body.dark {
             .item {
                 height: 500px;
                 &:hover {
-                    border: 2px solid darkTheme.$base-bkg;
+                    border: 2px solid darkTheme.$text-color;
                 }
     
                 &__techStack {
