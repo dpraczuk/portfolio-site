@@ -699,6 +699,7 @@ section.contact {
     .header {
         width: 80%;
         &__introduction {
+            width: 80%;
             h1,span {
                 font-size: 58px;
             }
@@ -707,17 +708,17 @@ section.contact {
             }
             p {
                 font-size: 18px;
-                width: 400px;
+                width: 380px;
                 margin: 25px 0 0 3px;
                 font-family: 'Poppins';
             }
         }
         &__photo {
-            top: 0px;
-            right: -150px;
+            top: 30px;
+            right: -90px;
             img {
-                height: 450px;
-                width: 550px;
+                height: 420px;
+                width: 520px;
             }
         }
     }

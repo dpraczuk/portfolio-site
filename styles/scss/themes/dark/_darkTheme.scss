@@ -308,6 +308,7 @@ body.dark {
         .header {
             width: 80%;
             &__introduction {
+                width: 80%;
                 h1,span {
                     font-size: 58px;
                 }
@@ -322,11 +323,11 @@ body.dark {
                 }
             }
             &__photo {
-                top: 0px;
-                right: -150px;
+                top: 30px;
+                right: -90px;
                 img {
-                    height: 450px;
-                    width: 550px;
+                    height: 420px;
+                    width: 520px;
                 }
             }
         }

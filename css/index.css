@@ -726,6 +726,9 @@ section.contact {
   .header {
     width: 80%;
   }
+  .header__introduction {
+    width: 80%;
+  }
   .header__introduction h1, .header__introduction span {
     font-size: 58px;
   }
@@ -734,17 +737,17 @@ section.contact {
   }
   .header__introduction p {
     font-size: 18px;
-    width: 400px;
+    width: 380px;
     margin: 25px 0 0 3px;
     font-family: "Poppins";
   }
   .header__photo {
-    top: 0px;
-    right: -150px;
+    top: 30px;
+    right: -90px;
   }
   .header__photo img {
-    height: 450px;
-    width: 550px;
+    height: 420px;
+    width: 520px;
   }
 
   .projects-wrapper {
@@ -1338,6 +1341,9 @@ body.dark .footer .bottom-nav__item:hover svg {
   body.dark .header {
     width: 80%;
   }
+  body.dark .header__introduction {
+    width: 80%;
+  }
   body.dark .header__introduction h1, body.dark .header__introduction span {
     font-size: 58px;
   }
@@ -1351,12 +1357,12 @@ body.dark .footer .bottom-nav__item:hover svg {
     font-family: "Poppins";
   }
   body.dark .header__photo {
-    top: 0px;
-    right: -150px;
+    top: 30px;
+    right: -90px;
   }
   body.dark .header__photo img {
-    height: 450px;
-    width: 550px;
+    height: 420px;
+    width: 520px;
   }
   body.dark .projects-wrapper {
     padding-bottom: 130px;
