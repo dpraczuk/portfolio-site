@@ -760,9 +760,9 @@ section.contact {
         }
     }
     .projects .mobile {
-        &:hover {
-            border: 2px solid #cacaca
-        }
+        // &:hover {
+        //     border: 2px solid #cacaca;
+        // }
         .item {
             &__techStack {
                 display: none;

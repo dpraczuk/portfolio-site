@@ -778,9 +778,6 @@ section.contact {
     font-size: 24px;
   }
 
-  .projects .mobile:hover {
-    border: 2px solid #cacaca;
-  }
   .projects .mobile .item__techStack {
     display: none;
   }

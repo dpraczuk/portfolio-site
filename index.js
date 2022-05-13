@@ -4,7 +4,7 @@ const swiper = new Swiper(".mySwiper", {
     slidesPerView: "auto",
     centeredSlides: true,
     spaceBetween: 20,
-    initialSlide: 1,
+    initialSlide: window.innerWidth <= 1060 ? 0 : 1,
 });
 
 const body = document.querySelector("body");
