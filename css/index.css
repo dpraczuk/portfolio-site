@@ -354,7 +354,7 @@ section.contact {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   border-radius: 10px;
-  height: 33rem;
+  height: 32rem;
   min-width: 100%;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
@@ -761,6 +761,7 @@ section.contact {
     height: 500px;
   }
   .projects .item__techStack {
+    display: block;
     left: 12.5px;
     padding: 10px 15px;
   }
@@ -769,6 +770,20 @@ section.contact {
   }
   .projects .item__subtitle {
     font-size: 24px;
+  }
+
+  .projects .mobile:hover {
+    border: 2px solid #cacaca;
+  }
+  .projects .mobile .item__techStack {
+    display: none;
+  }
+  .projects .mobile .item__subtitle {
+    font-size: 24px;
+  }
+  .projects .mobile .item__image img {
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 
   .stack {

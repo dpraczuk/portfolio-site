@@ -58,6 +58,21 @@ projectsItems.forEach((item) => {
     })
 })
 
+const techStackItems = document.querySelectorAll('.item__techStack')
+
+//toggle projects techStack div
+window.addEventListener("resize", () => {
+    if(window.innerWidth <= 1060) {
+        projectsItems.forEach(item => {
+            item.classList.add('mobile')
+        })
+    } else {
+        projectsItems.forEach(item => {
+            item.classList.remove('mobile')
+        })
+    }
+})
+
 const sideNav = document.querySelector('.side-nav');
 
 //side navigation onscroll opacity
