@@ -344,6 +344,9 @@ body.dark {
             }
             .item {
                 height: 500px;
+                &:hover {
+                    border: 2px solid darkTheme.$base-bkg;
+                }
     
                 &__techStack {
                     left: 12.5px;
