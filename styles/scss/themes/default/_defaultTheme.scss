@@ -454,6 +454,9 @@ section.contact {
         position: absolute;
         width: 100%;
     }
+    &__mobile {
+        display: none;
+    }
 
     &__icon {
         position: absolute;
@@ -1079,6 +1082,14 @@ section.contact {
         &__svg {
             display: none;
         }
+        &__mobile {
+            display: block;
+            margin: 0 auto;
+            width: 90%;
+            img {
+                width: 100%;
+            }
+        }
     }
 }
 
@@ -1543,19 +1554,7 @@ section.contact {
         }
     }
 }
-// @media (max-width: 400px) {
-//     .modal {
-//         height: 90%;
-//         top: -34%;
-//     }
-// }
 
-// @media (max-width: 420px) and (max-height: 800px) {
-//     .modal {
-//         height: 90%;
-//         top: -35%;
-//     }
-// }
 @media (max-width: 380px) {
     .modal {
         h4 {

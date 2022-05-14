@@ -474,6 +474,9 @@ section.contact {
   position: absolute;
   width: 100%;
 }
+.stack__mobile {
+  display: none;
+}
 .stack__icon {
   position: absolute;
   height: 40px;
@@ -1023,6 +1026,14 @@ section.contact {
   }
   .stack__svg {
     display: none;
+  }
+  .stack__mobile {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+  }
+  .stack__mobile img {
+    width: 100%;
   }
 }
 @media (max-width: 450px) {
