@@ -1355,10 +1355,7 @@ section.contact {
 @media (max-width: 500px) {
   .modal {
     width: 100%;
-    top: -27%;
-  }
-  .modal h4 {
-    margin-bottom: 50px;
+    top: -26%;
   }
   .modal__image {
     width: 90%;
@@ -1369,8 +1366,9 @@ section.contact {
 }
 @media (max-width: 450px) {
   .modal {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .modal h1 {
     font-size: 24px;
@@ -1385,6 +1383,9 @@ section.contact {
   }
   .modal__nav button:nth-child(1) {
     width: 40%;
+  }
+  .modal__image {
+    margin-top: 50px;
   }
   .modal__text-content p {
     font-size: 14px;
