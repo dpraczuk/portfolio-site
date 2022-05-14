@@ -1500,7 +1500,8 @@ section.contact {
 @media (max-width: 500px) {
     .modal {
         width: 100%;
-        top: -27%;
+        height: 100%;
+        top: -50%;
 
         &__image {
             width: 90%;
@@ -1542,16 +1543,21 @@ section.contact {
         }
     }
 }
-@media (max-width: 400px) {
-    .modal {
-        height: 90%;
-        top: -34%;
-    }
-}
+// @media (max-width: 400px) {
+//     .modal {
+//         height: 90%;
+//         top: -34%;
+//     }
+// }
+
+// @media (max-width: 420px) and (max-height: 800px) {
+//     .modal {
+//         height: 90%;
+//         top: -35%;
+//     }
+// }
 @media (max-width: 380px) {
     .modal {
-        height: 100%;
-        top: -50%;
         h4 {
             margin-bottom: 0;
         }

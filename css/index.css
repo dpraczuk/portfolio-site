@@ -1371,7 +1371,8 @@ section.contact {
 @media (max-width: 500px) {
   .modal {
     width: 100%;
-    top: -27%;
+    height: 100%;
+    top: -50%;
   }
   .modal__image {
     width: 90%;
@@ -1410,17 +1411,7 @@ section.contact {
     font-size: 14px;
   }
 }
-@media (max-width: 400px) {
-  .modal {
-    height: 90%;
-    top: -34%;
-  }
-}
 @media (max-width: 380px) {
-  .modal {
-    height: 100%;
-    top: -50%;
-  }
   .modal h4 {
     margin-bottom: 0;
   }
