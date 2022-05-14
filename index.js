@@ -3,6 +3,7 @@ const swiper = new Swiper(".mySwiper", {
     centeredSlides: true,
     spaceBetween: 20,
     initialSlide: window.innerWidth <= 1060 ? 0 : 1,
+    slideToClickedSlide: true,
 });
 
 const body = document.querySelector("body");
@@ -46,6 +47,10 @@ contactBtn.addEventListener("click", () => (scrollTo(contactSection)))
 
 const projectsItems = document.querySelectorAll('.projects__item-wrapper .item');
 
+const modalBackground = document.querySelector('.outer-modal');
+const modal = document.querySelector('.modal');
+const closeModalBtn = document.querySelector('.closeBtn');
+
 //project items mouseover event
 projectsItems.forEach((item) => {
     item.addEventListener('mouseenter', function() {
@@ -54,6 +59,36 @@ projectsItems.forEach((item) => {
     item.addEventListener('mouseleave', function() {
         item.firstElementChild.style.opacity = '0'
     })
+    //show Modal
+    item.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+        modalBackground.classList.remove('hidden');
+    })
+})
+
+function closeModal() {
+    modalBackground.classList.add('hidden');
+    modal.classList.add('hidden');
+}
+
+//close Modal on btn click
+closeModalBtn.addEventListener('click', () => {
+    modal.classList.add('hidden');
+    modalBackground.classList.add('hidden');
+})
+
+//close modal on background click
+modalBackground.addEventListener('click', () => {
+    if(!modalBackground.classList.contains('hidden')) {
+        closeModal();
+    }
+})
+
+//close modal on escape
+document.addEventListener('keydown', (e) => {
+    if(e.key === 'Escape') {
+        closeModal();
+    }
 })
 
 const techStackItems = document.querySelectorAll('.item__techStack')
@@ -90,7 +125,6 @@ window.addEventListener("scroll", () => {
 })
 
 //tech stack icons onscroll 
-
 window.addEventListener("scroll", () => {
 
     if(workSection.getBoundingClientRect().y < 400) {

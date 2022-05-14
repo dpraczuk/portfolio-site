@@ -1263,15 +1263,11 @@ section.contact {
 }
 .outer-modal {
     position: absolute;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        background-color: black;
-        opacity: 0.7;
-        z-index: 99;
-}
-.outer-modal.hidden{
-    display: none;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba( 000000, 0, 0, 0.75);
+    z-index: 99;
 }
 
 .modal {
@@ -1288,6 +1284,7 @@ section.contact {
     border-radius: 5px;
     padding: 30px 40px;
     z-index: 100;
+    // animation: fadein 1s;
 
     h1 {
         font-size: 32px;
@@ -1353,6 +1350,19 @@ section.contact {
             }
         }
     }
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fadein {
+	from {
+		opacity:0;
+	}
+	to {
+		opacity:1;
+	}
 }
 
 @media (max-width: 1500px) {
@@ -1490,10 +1500,8 @@ section.contact {
 @media (max-width: 500px) {
     .modal {
         width: 100%;
-        top: -26%;
-        // h4 {
-        //     margin-bottom: 50px;
-        // }
+        top: -27%;
+
         &__image {
             width: 90%;
             flex-basis: 60vw;
@@ -1504,6 +1512,8 @@ section.contact {
 @media (max-width: 450px) {
     .modal {
         justify-content: center;
+        // height: 90%;
+        // top: 26%;
         h1 {
             font-size: 24px;
         }

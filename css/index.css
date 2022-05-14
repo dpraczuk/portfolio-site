@@ -1130,13 +1130,8 @@ section.contact {
   top: 0;
   height: 100%;
   width: 100%;
-  background-color: black;
-  opacity: 0.7;
+  background-color: rgba(0, 0, 0, 0.75);
   z-index: 99;
-}
-
-.outer-modal.hidden {
-  display: none;
 }
 
 .modal {
@@ -1243,6 +1238,27 @@ section.contact {
   width: 30%;
 }
 
+.hidden {
+  display: none;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @media (max-width: 1500px) {
   .modal {
     height: 600px;
@@ -1355,7 +1371,7 @@ section.contact {
 @media (max-width: 500px) {
   .modal {
     width: 100%;
-    top: -26%;
+    top: -27%;
   }
   .modal__image {
     width: 90%;
@@ -1595,6 +1611,26 @@ body.dark .footer .bottom-nav__item svg {
 body.dark .footer .bottom-nav__item:hover svg {
   -webkit-filter: invert(79%) sepia(21%) saturate(1452%) hue-rotate(344deg) brightness(108%) contrast(98%);
           filter: invert(79%) sepia(21%) saturate(1452%) hue-rotate(344deg) brightness(108%) contrast(98%);
+}
+body.dark .hidden {
+  display: none;
+}
+body.dark .modal {
+  background-color: #2b2c2b;
+  border: 2px solid #474A47;
+  border-radius: 5px;
+}
+body.dark .modal h4 {
+  color: #FDCA40;
+}
+body.dark .modal__text-content p {
+  color: #FDFFFC;
+}
+body.dark .modal button {
+  color: #1f1f1e;
+}
+body.dark .modal button:hover {
+  color: #FDFFFC;
 }
 @media (max-width: 1600px) {
   body.dark .header__photo {

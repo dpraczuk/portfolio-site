@@ -249,6 +249,29 @@ body.dark {
             }
         }
     }
+    .hidden {
+        display: none;
+    }
+    .modal {
+        background-color: darkTheme.$secondary-bkg;
+        border: 2px solid darkTheme.$container-color;
+        border-radius: 5px;
+        h4 {
+            color: darkTheme.$main-yellow;
+        }
+        &__text-content {
+            p {
+                color: darkTheme.$text-color;
+            }
+        }
+        button {
+            color: darkTheme.$base-bkg;
+            &:hover {
+                color: darkTheme.$text-color;
+            }
+        }
+
+    }
 
     
     @media (max-width: 1600px) {
