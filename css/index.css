@@ -1377,6 +1377,9 @@ section.contact {
     font-size: 18px;
     margin-bottom: 0;
   }
+  .modal__nav {
+    margin-top: 20px;
+  }
   .modal__nav button {
     width: 40%;
     margin: 0 10px;
@@ -1385,7 +1388,7 @@ section.contact {
     width: 40%;
   }
   .modal__image {
-    margin-top: 50px;
+    margin-top: 30px;
   }
   .modal__text-content p {
     font-size: 14px;
@@ -1403,7 +1406,7 @@ section.contact {
     top: -50%;
   }
   .modal h4 {
-    margin-bottom: 20px;
+    margin-bottom: 0;
   }
   .modal__nav button {
     width: 40%;
