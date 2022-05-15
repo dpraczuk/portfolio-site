@@ -821,21 +821,24 @@ section.contact {
     position: fixed;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     text-align: center;
     width: 70vw;
-    height: 660px;
-    top: calc(50% - 660px);
+    height: 680px;
+    // top: -25%;
+    // left: 50%;
     left: 50%;
-    transform: translate(-50%, 50%);
+    top: 50%;
+    transform: translate(-50%, -50%);
+    // transform: translate(-50%, 50%);
     background-color: lightTheme.$base-bkg;
     border-radius: 5px;
-    padding: 30px 40px;
+    padding: 100px 40px;
     z-index: 100;
-    // animation: fadein 1s;
 
     h1 {
         font-size: 32px;
-        margin: 50px 0 5px;
+        // margin: px 0 5px;
     }
     h4 {
         font-size: 24px;
@@ -868,6 +871,7 @@ section.contact {
         p {
             font-size: 18px;
             width: 80%;
+            // height: 70%;
             text-align: center;
             margin: 0 auto;
         }
@@ -877,7 +881,14 @@ section.contact {
         flex-direction: row;
         margin-top: 40px;
         justify-content: center;
-        
+        a{
+            display: block;
+            width: 26%;
+            margin-right: 30px;
+            button {
+                width: 100%;
+            }
+        }
         button {
             transition: .5s;
             padding: 10px 20px;
@@ -888,13 +899,14 @@ section.contact {
             cursor: pointer;
             color: lightTheme.$base-bkg;
             font-weight: 400;
+            
             &:hover {
                 background-color: transparent;
                 color: lightTheme.$text-color
             }
-            &:nth-child(1) {
-                width: 30%;
-            }
+            // &:nth-child(1) {
+            //     width: 30%;
+            // }
         }
     }
 }
@@ -1251,7 +1263,17 @@ section.contact {
     }
 }
 
+
+
+
+
 //modal
+
+
+
+
+
+
 @keyframes fadein {
 	from {
 		opacity:0;
@@ -1261,12 +1283,12 @@ section.contact {
 	}
 }
 
-@media (max-width: 1500px) {
-    .modal {
-        height: 600px;
-        top: calc(50% - 600px);
-    }
-}
+// @media (max-width: 1500px) {
+//     .modal {
+//         height: 700px;
+//         top: calc(50% - 700px);
+//     }
+// }
 
 @media (max-width: 1400px) {
     .modal {
@@ -1288,8 +1310,10 @@ section.contact {
 
 @media (max-width: 1300px) {
     .modal {
-        height: 760px;
-        top: calc(50% - 760px);
+        height: 80%;
+        // top: -38%;
+        padding: 50px 30px;
+        // margin: auto auto;
         h1 {
             margin-top: 40px;
         }
@@ -1303,15 +1327,20 @@ section.contact {
         &__image {
             width: 450px;
             flex-basis: 360px;
-            margin: 0 auto;
+            margin: 0 auto 30px;
         }
         &__nav {
+            a{
+                display: block;
+                width: 20%;
+                margin-right: 30px;
+                button {
+                    width: 100%;
+                }
+            }
             button {
                 padding: 10px 15px;
                 width: 20%;
-                &:nth-child(1) {
-                    width: 20%;
-                }
             }
         }
     }
@@ -1325,6 +1354,11 @@ section.contact {
         }
     }
 }
+@media (max-width: 970px) {
+    .modal {
+        width: 90%;
+    }
+}
 
 @media (max-width: 910px) {
     .modal {
@@ -1336,15 +1370,15 @@ section.contact {
         &__image {
             width: 450px;
             flex-basis: 360px;
-            margin: 0 auto;
+            margin: 0 auto 30px;
+        }
+        a{
+            width: 26%;
         }
         &__nav {
             button {
                 padding: 10px 15px;
-                width: 30%;
-                &:nth-child(1) {
-                    width: 30%;
-                }
+                width: 26%;
             }
         }
     }
@@ -1352,7 +1386,8 @@ section.contact {
 
 @media (max-width: 790px) {
     .modal {
-        width: 80vw;
+        width: 90%;
+        height: 88%;
         h1 {
             margin-top: 20px;
         }
@@ -1364,6 +1399,7 @@ section.contact {
         }
     }
 }
+
 @media (max-width: 690px) {
     .modal {
         width: 95%;
@@ -1379,6 +1415,14 @@ section.contact {
         }
         h4 {
             font-size: 20px;
+        }
+        &__nav {
+            a{
+                width: 34%;
+            }
+            button {
+                width: 34%;
+            }
         }
     }
 }
@@ -1397,7 +1441,7 @@ section.contact {
     .modal {
         width: 100%;
         height: 100%;
-        top: -50%;
+        // top: -50%;
 
         &__image {
             width: 90%;
@@ -1409,8 +1453,7 @@ section.contact {
 @media (max-width: 450px) {
     .modal {
         justify-content: center;
-        // height: 90%;
-        // top: 26%;
+
         h1 {
             font-size: 24px;
         }
@@ -1420,13 +1463,16 @@ section.contact {
         }
         &__nav {
             margin-top: 20px;
+            a{
+                display: block;
+                width: 40%;
+                margin-right: 15px;
+                button {
+                    width: 100%;
+                }
+            }
             button {
                 width: 40%;
-                margin: 0 10px;
-                &:nth-child(1) {
-                    width: 40%;
-                }
-
             }
         }
         &__image {
@@ -1446,13 +1492,13 @@ section.contact {
             margin-bottom: 0;
         }
         &__nav {
-            button {
-                width: 40%;
-                margin: 0 10px;
-                &:nth-child(1) {
-                    width: 40%;
+            a{
+                button {
+                    width: 100%;
                 }
-
+            }
+            button {
+                margin: 0 10px;
             }
         }
         &__text-content {
