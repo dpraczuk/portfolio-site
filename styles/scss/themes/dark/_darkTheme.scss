@@ -52,9 +52,7 @@ body.dark {
         }
     }
 
-
     .header {
-
         &__introduction {
 
             h1,
@@ -226,7 +224,653 @@ body.dark {
     .footer {
         p {
             color: darkTheme.$text-color;
+            font-weight: 400;
+        }
+        // .bottom-nav-wrapper {
+        //     display: flex;
+        //     margin: 40px 0 40px;
+        //     justify-content: space-between;
+        //     gap: 60px;
+        // }
+        .bottom-nav {
+            &__item {
+                svg {
+                    width: 30px;
+                    height: 30px;
+                    filter: invert(93%) sepia(14%) saturate(312%) hue-rotate(67deg) brightness(111%) contrast(105%);
+                }
+
+                &:hover {
+                    svg {
+                        filter: invert(79%) sepia(21%) saturate(1452%) hue-rotate(344deg) brightness(108%) contrast(98%);
+                    }
+                }
+                
+            }
         }
     }
+    .hidden {
+        display: none;
+    }
+    .modal {
+        background-color: darkTheme.$secondary-bkg;
+        border: 2px solid darkTheme.$container-color;
+        border-radius: 5px;
+        h4 {
+            color: darkTheme.$main-yellow;
+        }
+        &__text-content {
+            p {
+                color: darkTheme.$text-color;
+            }
+        }
+        button {
+            color: darkTheme.$base-bkg;
+            &:hover {
+                color: darkTheme.$text-color;
+            }
+        }
 
+    }
+
+    
+    @media (max-width: 1600px) {
+
+        .header {
+            &__photo {
+                top: -40px;
+                right: -150px;
+                img {
+                    height: 590px;
+                    width: 730px;
+                }
+            }
+        }
+    }
+    
+    @media (max-width: 1360px) {
+    
+        .header {
+            &__photo {
+                top: 0px;
+                right: -80px;
+                img {
+                    height: 520px;
+                    width: 630px;
+                }
+            }
+        }
+    }
+    
+    @media (max-width: 1220px) {
+        .menu {
+            min-width: 0;
+            width: 80%;
+        }
+    
+        .header {
+            &__photo {
+                top: 40px;
+                right: 0px;
+                img {
+                    height: 440px;
+                    width: 530px;
+                }
+            }
+        }
+    }
+    
+    @media (max-width: 1200px) {
+        .side-nav-wrapper {
+            display: none;
+        }
+    }
+    
+    @media (max-width: 1060px) {
+    
+        .header {
+            width: 80%;
+            &__introduction {
+                width: 80%;
+                h1,span {
+                    font-size: 58px;
+                }
+                h2 {
+                    font-size: 36px;
+                }
+                p {
+                    font-size: 18px;
+                    width: 400px;
+                    margin: 25px 0 0 3px;
+                    font-family: 'Poppins';
+                }
+            }
+            &__photo {
+                top: 30px;
+                right: -90px;
+                img {
+                    height: 420px;
+                    width: 520px;
+                }
+            }
+        }
+    
+        .projects-wrapper {
+            padding-bottom: 130px;
+        }
+    
+        .projects {
+            &__container {
+                width: 820px;
+            }
+            &__item-wrapper {
+                max-width: 38%;
+            }
+            .item {
+                height: 500px;
+                &:hover {
+                    border: 2px solid darkTheme.$container-color;
+                }
+    
+                &__techStack {
+                    left: 12.5px;
+                    padding: 10px 15px;
+                    p {
+                        font-size: 18px;
+                    }
+                }
+                &__subtitle {
+                    font-size: 24px;
+                }
+            }
+        }
+    
+        .stack {
+            flex-direction: column;
+            min-height: 120vh;
+            align-items: center;
+    
+            &__content {
+                width: 700px;
+                margin: 0 auto 60px;
+            }
+    
+            &__svg {
+                width: 512px;
+                margin-bottom: 100px;
+            }
+        }
+    
+        .about {
+            flex-direction: column;
+            align-items: center;
+            &__content {
+                width: 700px;
+                margin: 0 auto 50px;
+            }
+        }
+        .contact {
+            h3 {
+                font-size: 32px;
+            }
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+    
+    @media (max-width: 980px) {
+    
+        .header-wrapper {
+            background: darkTheme.$base-bkg;
+        }
+        .header {
+            &__photo {
+                display: none;
+            }
+            &__introduction {
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, 0);
+                width: 90%;
+                h1,span {
+                    font-size: 64px;
+                }
+                h2 {
+                    font-size: 38px;
+                }
+                p {
+                    font-size: 22px;
+                    width: 100%;
+                }
+            }
+        }
+        .projects {
+            margin-top: 70px;
+        }
+    }
+    
+    @media (max-width: 850px) {
+        .projects {
+            overflow: hidden;
+            &__container {
+                width: 700px;
+            }
+            &__item-wrapper {
+                max-width: 38%;
+            }
+            .item {
+                height: 420px;
+    
+                &__techStack {
+                    padding: 10px 15px;
+                    width: 70%;
+                    left: 50%;
+                    border-radius: 5px;
+                    transform: translate(-50%, 0);
+                    p {
+                        font-size: 16px;
+                    }
+                }
+                &__subtitle {
+                    transition: 0.3s;
+                    font-size: 26px;
+                }
+            }
+        }
+    }
+    
+    @media (max-width: 800px) {
+        .stack, .about {
+            &__content {
+                width: 500px;
+            }
+        }
+    }
+    
+    @media(max-width: 750px) {
+        .projects {
+            &__container {
+                width: 600px;
+            }
+            &__item-wrapper {
+                max-width: 50%;
+            }
+            .item {
+                height: 420px;
+            }
+        }
+    }
+    
+    @media (max-width: 700px) {
+        .menu {
+            width: 85%;
+    
+            &__item {
+                display: none;
+            }
+        }
+        .stack, .about {
+            &__content {
+                p,strong {
+                    font-size: 16px;
+                }
+            }
+        }
+    
+        // .stack {
+        //     min-height: 90vh;
+        //     &__svg {
+        //         width: 380px;
+        //         height: 380px;
+        //     }
+        // //CSS
+        // &__icon--active:nth-child(2) {
+        //     height: 30px;
+        //     width: 30px;
+        //     top: 130px;
+        //     left: 230px;
+        // }
+    
+        // //GIT
+        // &__icon--active:nth-child(3) {
+        //     height: 34px;
+        //     width: 34px;
+        //     top: 30px;
+        //     left: 240px;
+        // }
+    
+    
+        // //HTML
+        // &__icon--active:nth-child(4) {
+        //     height: 30px;
+        //     width: 30px;
+        //     top: 115px;
+        //     left: 165px;
+        // }
+    
+        // //JS
+        // &__icon--active:nth-child(5) {
+        //     height: 30px;
+        //     width: 30px;
+        //     top: 55px;
+        //     left: 175px;
+        // }
+    
+        // //React
+        // &__icon--active:nth-child(6) {
+        //     height: 32px;
+        //     width: 32px;
+        //     top: 80px;
+        //     left: 235px;
+        // }
+    
+        // //Sass
+        // &__icon--active:nth-child(7) {
+        //     height: 30px;
+        //     width: 30px;
+        //     top: 90px;
+        //     left: 300px;
+        // }
+    
+        // }
+        .contact {
+            h3 {
+                font-size: 30px;
+            }
+            p {
+                font-size: 14px;
+                margin-bottom: 30px;
+            }
+        }
+    
+    }
+    
+    @media (max-width: 650px) {
+        .projects-wrapper {
+            padding-bottom: 30px;
+        }
+        .projects {
+            &__container {
+                width: 450px;
+            }
+            &__item-wrapper {
+                max-width: 50%;
+            }
+            .item {
+                height: 380px;
+                &__techStack {
+                    width: 84%;
+                }
+            }
+        }
+    }
+    
+    @media (max-width: 600px) {
+        .header {
+            &__introduction {
+                width: 100%;
+                margin: 0 auto;
+                h1,span {
+                    font-size: 54px;
+                }
+                h2 {
+                    font-size: 32px;
+                }
+                p {
+                    width: 300px;
+                    font-size: 18px;
+                    margin-top: 20px;
+                }
+                button {
+                    padding: 8px 24px;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    
+    @media (max-width: 550px) {
+        .stack, .about, .projects {
+            h3 {
+                font-size: 30px;
+            }
+            h4 {
+                font-size: 22px;
+            }
+            &__content {
+                width: 400px;
+            }
+        }
+        .about {
+            &__image {
+                height: 320px;
+                width: 320px;
+            }
+        }
+        .contact {
+            h3 {
+                margin: 50px 0 20px 0;
+            }
+        }
+        .footer {
+            p {
+                font-size: 12px;
+            }
+        }
+    }
+    
+    @media (max-width: 500px) {
+        .projects-wrapper {
+            height: 84vh;
+        }
+        .projects {
+            &__container {
+                width: 390px;
+            }
+            &__item-wrapper {
+                max-width: 48%;
+            }
+            .item {
+                height: 310px;
+                &__techStack {
+                    p {
+                        font-size: 13px;
+                    }
+                }
+                &__subtitle {
+                    font-size: 20px;
+                }
+            }
+        }
+        .stack {
+            min-height: 0;
+            margin: 55px 0 0 0;
+            &__svg {
+                display: none;
+            }
+        }
+    }
+    
+    @media (max-width: 450px) {
+        .header {
+            max-height: 60vh;
+            &__introduction {
+                h1, span {
+                    font-size: 44px;
+                }
+                h2 {
+                    font-size: 28px;
+                }
+                p {
+                    font-size: 16px;
+                    margin-top: 15px;
+                }
+            }
+        }
+        .stack, .about {
+            &__content {
+                width: 340px;
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+        .contact {
+            button {
+                width: 100px;
+                font-size: 14px;
+                padding: 10px 15px;
+            }
+        }
+    }
+    
+    @media (max-width: 430px) {
+        .projects-wrapper {
+            height: 740px;
+        }
+        .projects {
+            &__container {
+                width: 340px;
+            }
+            &__item-wrapper {
+                max-width: 54%;
+            }
+            .item {
+                height: 300px;
+                &__techStack {
+                    width: 86%;
+                }
+            }
+        }
+    }
+    
+    @media (max-width: 380px) {
+        .projects-wrapper {
+            height: 105vh;
+        }
+        .header {
+            min-height: 65vh;
+            
+            &__introduction {
+                span {
+                    margin-top: 0;
+                }
+                h1, span {
+                    font-size: 38px;
+                }
+                h2 {
+                    font-size: 26px;
+                    margin: 0;
+                }
+                p {
+                    margin-left: 0;
+                }
+                button {
+                    margin-left: 3px;
+                }
+            }
+        }
+        .stack, .about {
+            h3 {
+                font-size: 24px;
+            }
+            h4 {
+                font-size: 18px;
+            }
+            &__content {
+                width: 280px;
+                p,strong {
+                    font-size: 12px;
+                }
+            }
+        }
+        
+        // .stack { 
+        //     min-height: 80vh;
+        //     &__svg {
+        //         width: 300px;
+        //     }
+        //     //CSS
+        //     &__icon--active:nth-child(2) {
+        //         height: 24px;
+        //         width: 24px;
+        //         top: 105px;
+        //         left: 185px;
+        //     }
+        
+        //     //GIT
+        //     &__icon--active:nth-child(3) {
+        //         height: 26px;
+        //         width: 26px;
+        //         top: 25px;
+        //         left: 192px;
+        //         animation-delay: 0.5s;
+        //     }
+        
+        
+        //     //HTML
+        //     &__icon--active:nth-child(4) {
+        //         height: 24px;
+        //         width: 24px;
+        //         top: 90px;
+        //         left: 135px;
+        //         animation-delay: 1s;
+        //     }
+        
+        //     //JS
+        //     &__icon--active:nth-child(5) {
+        //         height: 24px;
+        //         width: 24px;
+        //         top: 47px;
+        //         left: 143px;
+        //         animation-delay: 1.5s;
+        //     }
+        
+        //     //React
+        //     &__icon--active:nth-child(6) {
+        //         height: 26px;
+        //         width: 26px;
+        //         top: 65px;
+        //         left: 185px;
+        //         animation-delay: 2s;
+        //     }
+        
+        //     //Sass
+        //     &__icon--active:nth-child(7) {
+        //         height: 26px;
+        //         width: 26px;
+        //         top: 70px;
+        //         left: 237px;
+        //         animation-delay: 2.5s;
+        //     }
+        // }
+        
+    
+    }
+    
+    @media (max-width: 370px) {
+        .projects {
+            &__container {
+                width: 300px;
+            }
+            &__item-wrapper {
+                max-width: 64%;
+            }
+            .item {
+                height: 310px;
+                &__techStack {
+                    width: 86%;
+                    p {
+                        font-size: 10px;
+                    }
+                }
+                &__subtitle {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    
+    
 }
