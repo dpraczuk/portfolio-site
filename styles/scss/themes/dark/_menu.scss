@@ -1,0 +1,64 @@
+@use '../../abstracts/darkThemeColors'as darkTheme;
+
+body.dark {
+    .menu {
+        .logo {
+            color: darkTheme.$main-yellow;
+        }
+
+        &__item {
+            &:hover {
+                color: darkTheme.$main-yellow
+            }
+        }
+
+        .theme-switch {
+            display: block;
+            height: 46px;
+            position: relative;
+            width: 46px;
+        }
+
+        .slider {
+            bottom: 0;
+            cursor: pointer;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: 0.3s;
+            border: 2px solid #ccc;
+            border-radius: 34px;
+
+            &:hover {
+                border-color: darkTheme.$text-color;
+            }
+        }
+
+        .slider.dark {
+            display: flex;
+            position: relative;
+            border-radius: 34px;
+            height: 46px;
+            width: 46px;
+            justify-content: center;
+            text-align: center;
+
+            img {
+                position: absolute;
+                top: 7px;
+                left: 7px;
+                height: 28px;
+                width: 28px;
+                justify-self: center;
+                opacity: 1;
+            }
+        }
+
+        .slider.light {
+            img {
+                opacity: 0;
+            }
+        }
+    }
+}

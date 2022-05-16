@@ -1,0 +1,57 @@
+@use '../../abstracts/lightThemeColors'as lightTheme;
+
+.about {
+    display: flex;
+    margin: 55px 0 55px;
+    flex-direction: row;
+    min-height: 400px;
+    justify-content: space-between;
+    align-items: center;
+
+    strong {
+        font-size: 18px;
+        color: lightTheme.$main-yellow
+    }
+
+    &__content {
+        flex-basis: 50%;
+
+        p {
+            font-size: 18px;
+        }
+    }
+
+    &__image {
+        flex-basis: 1;
+        height: 460px;
+        width: 460px;
+        background-color: lightTheme.$container-color;
+        border-radius: 10px;
+
+        img {
+            height: 100%;
+            width: 100%;
+            border-radius: 5px;
+        }
+    }
+}
+
+@media (max-width: 1060px) {
+    .about {
+        flex-direction: column;
+        align-items: center;
+        &__content {
+            width: 700px;
+            margin: 0 auto 50px;
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .about {
+        &__image {
+            height: 320px;
+            width: 320px;
+        }
+    }
+}

@@ -1,0 +1,78 @@
+@use '../../abstracts/lightThemeColors'as lightTheme;
+.contact {
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
+
+    h3 {
+        margin: 50px 0 30px 0;
+        justify-content: center;
+        text-align: center;
+    }
+
+    p {
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    a {
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+
+    button {
+        width: 130px;
+        background-color: lightTheme.$main-yellow;
+        border: 2px solid lightTheme.$main-yellow;
+        padding: 10px 0;
+        transition: 0.3s;
+        cursor: pointer;
+
+        &:hover {
+            background-color: transparent;
+        }
+    }
+}
+
+@media (max-width: 1060px) {
+    .contact {
+        h3 {
+            font-size: 32px;
+        }
+        p {
+            font-size: 16px;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .contact {
+        h3 {
+            font-size: 30px;
+        }
+        p {
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+    }
+
+}
+
+@media (max-width: 550px) {
+    .contact {
+        h3 {
+            margin: 50px 0 20px 0;
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .contact {
+        button {
+            width: 100px;
+            font-size: 14px;
+            padding: 10px 15px;
+        }
+    }
+}

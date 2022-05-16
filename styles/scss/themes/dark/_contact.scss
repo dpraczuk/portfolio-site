@@ -1,0 +1,16 @@
+@use '../../abstracts/darkThemeColors'as darkTheme;
+
+body.dark {
+    .contact {
+
+        button {
+            background-color: darkTheme.$main-yellow;
+            border: 1px solid darkTheme.$main-yellow;
+
+            &:hover {
+                background-color: transparent;
+                border-color: darkTheme.$main-yellow
+            }
+        }
+    }
+}
