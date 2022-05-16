@@ -1,0 +1,22 @@
+@use '../../abstracts/darkThemeColors'as darkTheme;
+
+body.dark {
+    .side-nav-wrapper {
+        .side-nav {
+            &__item {
+    
+                svg {
+                    width: 30px;
+                    height: 30px;
+                    filter: invert(93%) sepia(14%) saturate(312%) hue-rotate(67deg) brightness(111%) contrast(105%);
+                }
+    
+                &:hover {
+                    svg {
+                        filter: invert(79%) sepia(21%) saturate(1452%) hue-rotate(344deg) brightness(108%) contrast(98%);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,69 @@
+@use '../../abstracts/darkThemeColors'as darkTheme;
+
+body.dark {
+    .header {
+        &__introduction {
+
+            h1,
+            h2 {
+                font-family: 'Raleway';
+                font-weight: 300;
+                line-height: 55px;
+                span {
+                    color: darkTheme.$main-yellow;
+                }
+            }
+
+            h2 {
+                color: darkTheme.$subtitles-color;
+            }
+
+            p {
+                color: darkTheme.$text-color;
+            }
+
+            button {
+                background-color: darkTheme.$main-yellow;
+                border: 2px solid darkTheme.$main-yellow;
+                color: darkTheme.$base-bkg;
+                margin-top: 35px;
+                margin-left: 10px;
+
+                &:hover {
+                    border: 2px solid darkTheme.$main-yellow;
+                    color: darkTheme.$text-color;
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 980px) {
+        .header-wrapper {
+            background: darkTheme.$base-bkg;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .header {
+            &__introduction {
+                p {
+                    width: 300px;
+                    font-size: 18px;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 450px) {
+        .header {
+            &__introduction {
+                p {
+                    font-size: 16px;
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+}

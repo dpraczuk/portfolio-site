@@ -1,0 +1,48 @@
+@use '../../abstracts/lightThemeColors'as lightTheme;
+.footer {
+    .bottom-nav-wrapper {
+        display: flex;
+        margin: 40px 0 40px;
+        justify-content: space-between;
+        gap: 60px;
+    }
+    .bottom-nav {
+        &__item {
+            svg {
+                width: 30px;
+                height: 30px;
+                filter: invert(41%) sepia(5%) saturate(256%) hue-rotate(201deg) brightness(90%) contrast(91%);
+            }
+            &:hover {
+                svg {
+                    filter: invert(79%) sepia(21%) saturate(1452%) hue-rotate(344deg) brightness(108%) contrast(98%);
+                }
+            }
+            
+        }
+    }
+    display: flex;
+    min-height: 120px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    p {
+        text-align: center;
+        font-size: 15px;
+        margin-top: 50px;
+        font-weight: 400;
+    }
+}
+
+@media (max-width: 550px) {
+    .footer {
+        .bottom-nav-wrapper {
+            margin: 25px 0 30px;
+            gap: 40px;
+        }
+        p {
+            font-size: 12px;
+        }
+    }
+}

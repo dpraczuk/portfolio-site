@@ -1,0 +1,186 @@
+@use '../../abstracts/darkThemeColors'as darkTheme;
+
+body.dark {
+    .projects {
+
+        &__item-wrapper {
+            max-width: 30%;
+            gap: 15px;
+            border-radius: 10px;
+            flex-grow: 1;
+        }
+
+        .item {
+            border: 2px solid darkTheme.$container-color;
+
+            &:hover {
+                border: 2px solid darkTheme.$text-color;
+            }
+
+            &__techStack {
+                background-color: #f1f1f1;
+                border: 1px solid #616161;
+
+                p {
+                    color: #000;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1060px) {
+    
+        .projects-wrapper {
+            padding-bottom: 130px;
+        }
+    
+        .projects {
+            &__container {
+                width: 820px;
+            }
+            &__item-wrapper {
+                max-width: 38%;
+            }
+            .item {
+                height: 500px;
+                &:hover {
+                    border: 2px solid darkTheme.$container-color;
+                }
+    
+                &__techStack {
+                    left: 12.5px;
+                    padding: 10px 15px;
+                    p {
+                        font-size: 18px;
+                    }
+                }
+                &__subtitle {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 850px) {
+        .projects {
+            // overflow: hidden;
+            &__container {
+                width: 700px;
+            }
+            .item {
+                height: 420px;
+    
+                &__techStack {
+                    padding: 10px 15px;
+                    width: 70%;
+                    left: 50%;
+                    border-radius: 5px;
+                    transform: translate(-50%, 0);
+                    p {
+                        font-size: 16px;
+                    }
+                }
+                &__subtitle {
+                    transition: 0.3s;
+                    font-size: 26px;
+                }
+            }
+        }
+    }
+
+    @media(max-width: 750px) {
+        .projects {
+            &__container {
+                width: 600px;
+            }
+            &__item-wrapper {
+                max-width: 50%;
+            }
+            .item {
+                height: 420px;
+            }
+        }
+    }
+
+    @media (max-width: 650px) {
+        .projects-wrapper {
+            padding-bottom: 30px;
+        }
+        .projects {
+            &__container {
+                width: 450px;
+            }
+            &__item-wrapper {
+                max-width: 50%;
+            }
+            .item {
+                height: 380px;
+                &__techStack {
+                    width: 84%;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        .projects {
+            &__container {
+                width: 390px;
+            }
+            &__item-wrapper {
+                max-width: 48%;
+            }
+            .item {
+                height: 310px;
+                &__techStack {
+                    p {
+                        font-size: 13px;
+                    }
+                }
+                &__subtitle {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 430px) {
+        .projects-wrapper {
+            height: 740px;
+        }
+        .projects {
+            &__container {
+                width: 340px;
+            }
+            &__item-wrapper {
+                max-width: 54%;
+            }
+            .item {
+                height: 300px;
+            }
+        }
+    }
+
+    @media (max-width: 370px) {
+        .projects {
+            &__container {
+                width: 300px;
+            }
+            &__item-wrapper {
+                max-width: 64%;
+            }
+            .item {
+                height: 310px;
+                &__techStack {
+                    width: 86%;
+                    p {
+                        font-size: 10px;
+                    }
+                }
+                &__subtitle {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}

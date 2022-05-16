@@ -1,0 +1,150 @@
+@use '../../abstracts/lightThemeColors'as lightTheme;
+
+.stack {
+    display: flex;
+    margin: 55px 0 55px;
+    flex-direction: row;
+    min-height: 500px;
+
+    strong {
+        font-size: 18px;
+        color: lightTheme.$main-yellow;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 45%;
+        align-items: flex-start;
+        align-self: center;
+    }
+
+    &__svg {
+        position: relative;
+        flex-basis: 50%;
+    }
+
+    &__image {
+        position: absolute;
+        width: 100%;
+    }
+    &__mobile {
+        display: none;
+    }
+
+    &__icon {
+        position: absolute;
+        height: 40px;
+        width: 40px;
+        z-index: 1;
+        transition: 3s;
+        filter: invert(79%) sepia(21%) saturate(1452%) hue-rotate(344deg) brightness(108%) contrast(98%);
+        opacity: 0;
+    }
+
+    @keyframes setOpacity {
+        0% {
+            filter: invert(79%) sepia(21%) saturate(1452%) hue-rotate(344deg) brightness(108%) contrast(98%);
+            opacity: 0
+        }
+
+        100% {
+            opacity: 1
+        }
+    }
+
+    //CSS
+    &__icon--active:nth-child(2) {
+        top: 175px;
+        left: 310px;
+        animation-name: setOpacity;
+        animation-duration: 2s;
+        animation-delay: 0.1s;
+        animation-fill-mode: forwards;
+    }
+
+    &__icon--active {
+        animation-name: setOpacity;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+    }
+
+    //GIT
+    &__icon--active:nth-child(3) {
+        height: 45px;
+        width: 45px;
+        top: 40px;
+        left: 315px;
+        animation-delay: 0.5s;
+    }
+
+
+    //HTML
+    &__icon--active:nth-child(4) {
+        top: 155px;
+        left: 220px;
+        animation-delay: 1s;
+    }
+
+    //JS
+    &__icon--active:nth-child(5) {
+        top: 75px;
+        left: 230px;
+        animation-delay: 1.5s;
+    }
+
+    //React
+    &__icon--active:nth-child(6) {
+        height: 42px;
+        width: 42px;
+        top: 110px;
+        left: 310px;
+        animation-delay: 2s;
+    }
+
+    //Sass
+    &__icon--active:nth-child(7) {
+        height: 45px;
+        width: 45px;
+        top: 120px;
+        left: 400px;
+        animation-delay: 2.5s;
+    }
+}
+
+
+@media (max-width: 1060px) {
+    .stack {
+        flex-direction: column;
+        min-height: 120vh;
+        align-items: center;
+
+        &__content {
+            width: 700px;
+            margin: 0 auto 60px;
+        }
+
+        &__svg {
+            width: 512px;
+            margin-bottom: 100px;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .stack {
+        min-height: 0;
+        margin: 55px 0 0 0;
+        &__svg {
+            display: none;
+        }
+        &__mobile {
+            display: block;
+            margin: 0 auto;
+            width: 90%;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

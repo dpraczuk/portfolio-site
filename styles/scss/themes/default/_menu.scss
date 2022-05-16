@@ -1,0 +1,107 @@
+@use '../../abstracts/lightThemeColors'as lightTheme;
+.menu {
+    display: flex;
+    min-width: 1040px;
+    justify-content: space-between;
+    margin-top: 15px;
+    margin-bottom: 100px;
+
+    .logo {
+        font-family: 'Dancing Script';
+        color: lightTheme.$main-yellow;
+        font-size: 30px;
+    }
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        margin-right: 50px;
+        align-self: center;
+        font-weight: 400;
+        transition: 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+            color: lightTheme.$main-yellow
+        }
+    }
+
+    .theme-switch-wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    .theme-switch {
+        display: inline-block;
+        height: 46px;
+        position: relative;
+        width: 46px;
+    }
+
+    .slider {
+        bottom: 0;
+        cursor: pointer;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition: .3s;
+        border: 2px solid #ccc;
+        border-radius: 34px;
+
+        &:hover {
+            border-color: lightTheme.$text-color;
+        }
+    }
+
+    .slider.light {
+        display: flex;
+        position: relative;
+        border-radius: 34px;
+        height: 46px;
+        width: 46px;
+        justify-content: center;
+        text-align: center;
+
+        img {
+            position: absolute;
+            top: 7px;
+            left: 7px;
+            height: 28px;
+            width: 28px;
+            justify-self: center;
+            opacity: 1;
+            transition: .8s;
+        }
+    }
+
+    .slider.dark {
+        img {
+            position: absolute;
+            top: 7px;
+            left: 7px;
+            height: 28px;
+            width: 28px;
+            transition: .8s;
+            opacity: 0;
+        }
+    }
+}
+
+@media (max-width: 1220px) {
+    .menu {
+        min-width: 0;
+        width: 80%;
+    }
+}
+@media (max-width: 700px) {
+    .menu {
+        width: 85%;
+
+        &__item {
+            display: none;
+        }
+    }
+}

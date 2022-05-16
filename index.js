@@ -9,7 +9,7 @@ const projects = [
             link: '<a href="https://www.github.com/dpraczuk/portfolio-site" target="_blank" rel="noopener noreferrer"><button>Github</button></a>',
             image: './assets/projects/portfolio-hq.png',
             technologies: 'Vanilla Javascript, SCSS, Swiper.js',
-            text: 'Simple static website - designed in Figma by myself, created with Vanilla Javascript. Class names in BEM methodology, also used SCSS for better readability of CSS code.',
+            text: 'Simple static website - designed in Figma by myself, created with Vanilla Javascript. Class names in BEM methodology, also used SCSS for better readability of CSS code. One thing I would change - design with less breakpoints.',
         }
     },
     {
@@ -22,7 +22,7 @@ const projects = [
             link: '<a href="https://prezentperfektsite.vercel.app/" target="_blank" rel="noopener noreferrer"><button>Link</button></a>',
             image: './assets/projects/pperfekt-hq.png',
             technologies: 'React, Next.js, Firebase & libraries (Formik, Swiper.js)',
-            text: 'My first project for commercial client - Prezent Perfekt. Form (Formik library) connected with actionforms.io as a backend which collects data sent by clients. For validation I decided to choose Yup library, and for styling - styled components. Also I decided to use Firebase DB and Firebase Storage - as a semi-CMS, to provide ability to change content without touching the code. Designed by myself.',
+            text: 'My first project for commercial client - Prezent Perfekt. Form (Formik library) connected with actionforms.io as a backend which collects data sent by clients. For validation I decided to choose Yup library, and for styling - styled components. Also I decided to use Firebase DB and Firebase Storage - as a semi-CMS, to provide ability to change content without touching the code.',
         }
     },
     {

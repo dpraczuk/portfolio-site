@@ -1,0 +1,154 @@
+@use '../../abstracts/lightThemeColors'as lightTheme;
+
+body {
+    position: relative;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: lightTheme.$text-color;
+    font-size: 16px;
+}
+
+*:not(h1, h2, h3) {
+    font-family: 'Poppins';
+}
+
+p {
+    font-weight: 300;
+    color: lightTheme.$text-color;
+    line-height: 1.55;
+    font-size: 18px;
+}
+
+h3 {
+    font-family: 'Rubik';
+    font-weight: 400;
+    font-size: 36px;
+}
+
+h4 {
+    font-size: 28px;
+    font-weight: 400;
+    color: lightTheme.$subtitles-color;
+    margin-bottom: 32px;
+}
+
+body {
+    position: relative;
+    background-color: lightTheme.$base-bkg;
+}
+
+.backgroundStyleWrapper {
+    position: relative;
+}
+
+.projects-wrapper,
+.stack-wrapper,
+.about-wrapper,
+.header-wrapper,
+.contact-wrapper,
+.footer-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.projects-wrapper,
+.stack-wrapper,
+.about-wrapper {
+    padding: 30px 0;
+}
+
+.header-wrapper {
+    flex-direction: column;
+    padding-top: 34px;
+    background: linear-gradient(157.5deg, lightTheme.$base-bkg 44.5%, lightTheme.$secondary-bkg 43%);
+}
+
+.footer-wrapper,
+.projects-wrapper,
+.about-wrapper {
+    background-color: lightTheme.$secondary-bkg;
+}
+
+.stack,
+.projects,
+.menu,
+header.header,
+.about,
+section.contact {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.stack-wrapper,
+.contact-wrapper {
+    background-color: lightTheme.$container-secondary;
+}
+
+.projects-wrapper {
+    justify-content: center;
+    padding-bottom: 100px;
+    margin: 0;
+}
+
+@media (max-width: 800px) {
+    .stack, .about {
+        &__content {
+            width: 500px;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .stack, .about {
+        &__content {
+            p,strong {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .stack, .about, .projects {
+        h3 {
+            font-size: 30px;
+        }
+        h4 {
+            font-size: 22px;
+        }
+        &__content {
+            width: 400px;
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    .stack, .about {
+        &__content {
+            width: 340px;
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media (max-width: 380px) {
+    .stack, .about {
+        h3 {
+            font-size: 24px;
+        }
+        h4 {
+            font-size: 18px;
+        }
+        &__content {
+            width: 280px;
+            p,strong {
+                font-size: 12px;
+            }
+        }
+    }
+}

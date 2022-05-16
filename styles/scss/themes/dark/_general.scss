@@ -1,0 +1,59 @@
+@use '../../abstracts/darkThemeColors'as darkTheme;
+
+body.dark {
+    * {
+        color: darkTheme.$text-color;
+    }
+
+    p {
+        font-weight: 300;
+        color: #000;
+        line-height: 1.55;
+    }
+
+    h1,
+    h2 {
+        line-height: 50px;
+    }
+
+    h4 {
+        color: darkTheme.$subtitles-color;
+    }
+
+    body {
+        background-color: darkTheme.$base-bkg;
+    }
+
+    .stack-wrapper,
+    .contact-wrapper {
+        background-color: darkTheme.$container-secondary;
+    }
+
+    .header-wrapper {
+        background: linear-gradient(157.5deg, darkTheme.$base-bkg 44.5%, darkTheme.$secondary-bkg 43%);
+    }
+
+    .footer-wrapper,
+    .projects-wrapper,
+    .about-wrapper {
+        background-color: darkTheme.$secondary-bkg;
+    }
+
+    .stack,
+    .projects,
+    .menu,
+    header.header,
+    .about,
+    section.contact {
+        p {
+            color: darkTheme.$text-color;
+        }
+    }
+    .about,
+    .stack {
+        strong {
+            font-size: 18px;
+            color: darkTheme.$main-yellow
+        }
+    }
+}
