@@ -1,50 +1,10 @@
-const projects = [
-    {   
-        id: 1,
-        subtitle: 'My portfolio',
-        sliderImage: './assets/projects/portfolio-site.png',
-        techStack: 'Vanilla Javascript',
-        innerItem: {
-            title: 'Personal Portfolio',
-            link: '<a href="https://www.github.com/dpraczuk/portfolio-site" target="_blank" rel="noopener noreferrer"><button>Github</button></a>',
-            image: './assets/projects/portfolio-hq.png',
-            technologies: 'Vanilla Javascript, SCSS, Swiper.js',
-            text: 'Simple static website - designed in Figma by myself, created with Vanilla Javascript. Class names in BEM methodology, also used SCSS for better readability of CSS code. One thing I would change - design with less breakpoints.',
-        }
-    },
-    {
-        id: 2,
-        subtitle: 'Prezent Perfekt site',
-        sliderImage: './assets/projects/pperfekt.png',
-        techStack: 'React & Next.js',
-        innerItem: {
-            title: 'Prezent Perfekt site',
-            link: '<a href="https://prezentperfektsite.vercel.app/" target="_blank" rel="noopener noreferrer"><button>Link</button></a>',
-            image: './assets/projects/pperfekt-hq.png',
-            technologies: 'React, Next.js, Firebase & libraries (Formik, Swiper.js)',
-            text: 'My first project for commercial client - Prezent Perfekt. Form (Formik library) connected with actionforms.io as a backend which collects data sent by clients. For validation I decided to choose Yup library, and for styling - styled components. Also I decided to use Firebase DB and Firebase Storage - as a semi-CMS, to provide ability to change content without touching the code.',
-        }
-    },
-    {
-        id: 3,
-        subtitle: 'Physical activity tracker',
-        sliderImage: './assets/projects/tracker.png',
-        techStack: 'React & Typescript',
-        innerItem: {
-            title: 'Physical activity tracker',
-            link: '',
-            image: './assets/projects/tracker-hq.png',
-            technologies: 'React, Next.js, Typescript',
-            text: 'Application in development stage. Main concept of application would be progress tracking of mainly gym activities. Project created to help me learn and consolidate knowledge about new technologies for example Redux, Typescript, maybe React Native and Node.js in the future.',
-        }
-    }
-];
-
 const swiperWrapper = document.querySelector('.swiper-wrapper');
 
-// 'render' project items from "DB"
-projects.map(item => {
-    swiperWrapper.innerHTML += `
+const projects = await fetch('./data.json')
+    .then(response => response.json())
+    .then(data => {
+        data.map(item => {
+            swiperWrapper.innerHTML += `
                         <div class="projects__item-wrapper swiper-slide">
                             <div id=${item.id} class="item">
                                 <div class="item__techStack">
@@ -56,35 +16,35 @@ projects.map(item => {
                             </div>
                             <div class="item__subtitle">${item.subtitle}</div>
                         </div>
-    `
-});
+            `
+        });
+        data.map(item => {
+            const btnTemplate = `<a href="${item.innerItem.link}" target="_blank" rel="noopener noreferrer"><button>${item.innerItem.btnInnerTxt}</button></a>`
 
-
-
-projects.map(item => {
-    // const repoConditional = repo.length > 0 ? `<button><a href="${repo}">Github</a></button>` : `<button><a href="${link}">Link</a></button`;
-    document.body.innerHTML += `
-        <div id=${item.id} class="outer-modal hidden"></div>
-        <div id=${item.id} class="modal hidden">
-            <div class="modal__titles">
-                <h1>${item.innerItem.title}</h1>
-                <h4>Technologies: ${item.innerItem.technologies}</h4>
-            </div>
-            <div class="modal__content-wrapper">
-                <div class="modal__image">
-                    <img src="${item.innerItem.image}">
-                </div>
-                <div class="modal__text-content">
-                    <p>${item.innerItem.text}</p>
-                    <div class="modal__nav">
-                        ${item.innerItem.link}
-                        <button class="closeBtn">Close</button>
+            document.body.innerHTML += `
+                <div id=${item.id} class="outer-modal hidden"></div>
+                <div id=${item.id} class="modal hidden">
+                    <div class="modal__titles">
+                        <h1>${item.innerItem.title}</h1>
+                        <h4>Technologies: ${item.innerItem.technologies}</h4>
+                    </div>
+                    <div class="modal__content-wrapper">
+                        <div class="modal__image">
+                            <img src="${item.innerItem.image}">
+                        </div>
+                        <div class="modal__text-content">
+                            <p>${item.innerItem.text}</p>
+                            <div class="modal__nav">
+                                ${item.innerItem.link === '' ? '' : btnTemplate}
+                                <button class="closeBtn">Close</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    `
-})
+            `
+        })
+    })
+    .catch(error => console.log(error));
 
 const swiper = new Swiper(".mySwiper", {
     slidesPerView: "auto",
