@@ -57,13 +57,33 @@ const swiper = new Swiper(".mySwiper", {
 const body = document.querySelector("body");
 const themeBtn = document.querySelector('.theme-switch');
 const stackIcons = document.querySelectorAll('.stack__icon');
+// let theme = localStorage.getItem('data-theme');
 
-const changeTheme = () => {
-    body.classList.toggle('dark');
-    stackIcons.forEach(icon => {
-        icon.style.opacity = "0"
-})
+let theme = localStorage.getItem('data-theme');
+
+const changeToLightMode = () => {
+    body.classList.remove('dark');
+    localStorage.setItem("data-theme", "light");
 }
+
+const changeToDarkMode = () => {
+    body.classList.add('dark');
+    localStorage.setItem("data-theme", "dark");
+}
+
+if(theme === 'dark') {
+    changeToDarkMode();
+}
+
+themeBtn.addEventListener("click", () => {
+    let theme = localStorage.getItem('data-theme');
+
+    if (theme === 'dark'){
+        changeToLightMode();
+    }else{
+        changeToDarkMode();
+    }
+})
 //Nav buttons
 
 const contactBtn = document.querySelector('.menu__item--contact');
@@ -84,7 +104,7 @@ const scrollTo = (element) => {
 
 //Theme toggler
 
-themeBtn.addEventListener("click", changeTheme);
+// themeBtn.addEventListener("click", changeTheme);
 
 //Scroll to section on click
 
