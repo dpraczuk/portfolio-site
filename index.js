@@ -57,7 +57,10 @@ const swiper = new Swiper(".mySwiper", {
 const body = document.querySelector("body");
 const themeBtn = document.querySelector('.theme-switch');
 const stackIcons = document.querySelectorAll('.stack__icon');
+// let theme = localStorage.getItem('data-theme');
+
 let theme = localStorage.getItem('data-theme');
+console.log(theme)
 
 const changeToLightMode = () => {
     body.classList.remove('dark');
@@ -72,8 +75,9 @@ const changeToDarkMode = () => {
 window.addEventListener('load', () => {
     if (theme === 'dark'){
         changeToDarkMode();
-    }
-})
+    } else return
+});
+
 
 themeBtn.addEventListener("click", () => {
     let theme = localStorage.getItem('data-theme');
