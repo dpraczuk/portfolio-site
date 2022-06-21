@@ -60,20 +60,23 @@ const stackIcons = document.querySelectorAll('.stack__icon');
 // let theme = localStorage.getItem('data-theme');
 
 let theme = localStorage.getItem('data-theme');
-console.log(theme)
+
 
 const changeToLightMode = () => {
+    console.log('apply lightmode')
     body.classList.remove('dark');
     localStorage.setItem("data-theme", "light");
 }
 
 const changeToDarkMode = () => {
+    onsole.log('apply darkmode')
     body.classList.add('dark');
     localStorage.setItem("data-theme", "dark");
 }
 
 window.addEventListener('load', () => {
     if (theme === 'dark'){
+        console.log('change to darkmode')
         changeToDarkMode();
     } else return
 });
