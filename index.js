@@ -69,7 +69,7 @@ const changeToLightMode = () => {
 }
 
 const changeToDarkMode = () => {
-    onsole.log('apply darkmode')
+    console.log('apply darkmode')
     body.classList.add('dark');
     localStorage.setItem("data-theme", "dark");
 }
