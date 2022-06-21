@@ -74,12 +74,9 @@ const changeToDarkMode = () => {
     localStorage.setItem("data-theme", "dark");
 }
 
-window.addEventListener('load', () => {
-    if (theme === 'dark'){
-        console.log('change to darkmode')
-        changeToDarkMode();
-    } else return
-});
+if(theme === 'dark') {
+    changeToDarkMode();
+}
 
 
 themeBtn.addEventListener("click", () => {
