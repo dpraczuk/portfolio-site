@@ -61,15 +61,12 @@ const stackIcons = document.querySelectorAll('.stack__icon');
 
 let theme = localStorage.getItem('data-theme');
 
-
 const changeToLightMode = () => {
-    console.log('apply lightmode')
     body.classList.remove('dark');
     localStorage.setItem("data-theme", "light");
 }
 
 const changeToDarkMode = () => {
-    console.log('apply darkmode')
     body.classList.add('dark');
     localStorage.setItem("data-theme", "dark");
 }
@@ -77,7 +74,6 @@ const changeToDarkMode = () => {
 if(theme === 'dark') {
     changeToDarkMode();
 }
-
 
 themeBtn.addEventListener("click", () => {
     let theme = localStorage.getItem('data-theme');
