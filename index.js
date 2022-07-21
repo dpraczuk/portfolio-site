@@ -26,7 +26,7 @@ const projects = await fetch('./data.json')
                 <div id=${item.id} class="modal hidden">
                     <div class="modal__titles">
                         <h1>${item.innerItem.title}</h1>
-                        <h4>Technologies: ${item.innerItem.technologies}</h4>
+                        <h4>Stack: ${item.innerItem.technologies}</h4>
                     </div>
                     <div class="modal__content-wrapper">
                         <div class="modal__image">

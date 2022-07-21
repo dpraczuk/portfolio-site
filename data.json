@@ -6,7 +6,7 @@
         "techStack": "Vanilla Javascript",
         "innerItem": {
             "title": "Personal Portfolio",
-            "link": "www.github.com/dpraczuk/portfolio-site",
+            "link": "https://github.com/dpraczuk/portfolio-site",
             "btnInnerTxt": "Github",
             "image": "./assets/projects/portfolio-hq.png",
             "technologies": "Vanilla Javascript, SCSS, Swiper.js",
@@ -23,8 +23,8 @@
             "link": "https://prezentperfektsite.vercel.app/",
             "btnInnerTxt": "Link",
             "image": "./assets/projects/pperfekt-hq.png",
-            "technologies": "React, Next.js, Firebase & libraries (Formik, Swiper.js)",
-            "text": "My first project for commercial client - Prezent Perfekt. Form (Formik library) connected with actionforms.io as a backend which collects data sent by clients. For validation I decided to choose Yup library, and for styling - styled components. Also I decided to use Firebase DB and Firebase Storage - as a semi-CMS, to provide ability to change content without touching the code."
+            "technologies": "React, Next.js, Strapi, AWS & libraries",
+            "text": "My first project for commercial client - Prezent Perfekt. Form (Formik library) connected with actionforms.io as a backend which collects data sent by clients. For validation I decided to choose Yup library, and for styling - styled components. Also I decided to use headless CMS - Strapi with AWS S3 as a provider, to manage content on the website."
         }
     },
     {
@@ -34,10 +34,10 @@
         "techStack": "React & Typescript",
         "innerItem": {
             "title": "Physical activity tracker",
-            "link": "",
-            "btnInnerTxt": "",
+            "link": "https://github.com/dpraczuk/tracare",
+            "btnInnerTxt": "Github",
             "image": "./assets/projects/tracker-hq.png",
-            "technologies": "React, Next.js, Typescript",
+            "technologies": "React, Typescript, Styled Components",
             "text": "Application in development stage. Main concept of application would be progress tracking of mainly gym activities. Project created to help me learn and consolidate knowledge about new technologies for example Redux, Typescript, maybe React Native and Node.js in the future."
         }
     }

@@ -332,7 +332,6 @@ body.dark .stack strong {
   .header-wrapper {
     background: none;
   }
-
   .header__photo {
     display: none;
   }
@@ -792,7 +791,6 @@ body.dark .menu .slider.light img {
   .projects-wrapper {
     padding-bottom: 130px;
   }
-
   .projects__container {
     width: 820px;
   }
@@ -816,7 +814,6 @@ body.dark .menu .slider.light img {
   .projects .item__subtitle {
     font-size: 24px;
   }
-
   .projects .mobile .item__techStack {
     display: none;
   }
@@ -878,7 +875,6 @@ body.dark .menu .slider.light img {
   .projects-wrapper {
     padding-bottom: 30px;
   }
-
   .projects__container {
     width: 450px;
   }
